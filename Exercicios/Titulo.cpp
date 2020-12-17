@@ -2,11 +2,18 @@
 using namespace std;
 
 string title(string F){
-	string Tolowercase;
-	for(int i=0; i < F.size(); i++){
-		Tolowercase += F[i];
-	}
-	return Tolowercase;
+	F[0] = toupper(F[0]);
+	for (int i = 1; i < F.size(); i++){
+		if (F[i-1] == ' '){
+			F[i] = toupper(F[i]);
+		}
+		else{
+			F[i] = tolower(F[i]);
+		}
+  	}
+  	
+	return F;
+	
 }
 
 int main(){ 
@@ -17,3 +24,9 @@ int main(){
 	cout << title(F) << "\n";
 }
 
+/*
+65 ate 90 minusculas
+97 ate 122 maiusculas
+DalmAtas sao os melhores
+
+*/
