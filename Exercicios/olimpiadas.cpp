@@ -18,7 +18,7 @@ int ord(pais a, pais b){
 }
 
 int main(){
-    cin>>n>>m;
+    cin >> n >> m;
 
     for(int i = 0; i < n; i++){
         v[i].ouro = 0;
@@ -35,7 +35,7 @@ int main(){
         v[b - 1].bronze++;
     }
 
-    sort(v, v+n, ord);
+    sort(v, v + n, ord);
 
     for(int i = 0; i < n; i++) cout << v[i].id << " ";
     cout << endl;

@@ -7,7 +7,7 @@ int main(){
 
 	scanf("%d",&num1);
 
-	scanf("%s",&sinal[0]);
+	scanf("%c",&sinal[0]);
 
 	scanf("%d",&num2);
 	

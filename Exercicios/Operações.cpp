@@ -3,7 +3,7 @@
 int main(){
 	double num1,num2,aux,aux2;
 	char sinal;
-	scanf("%s",&sinal);
+	scanf("%c", sinal);
 	scanf("%lf",&num1);
 	scanf("%lf",&num2);
 	if(sinal=='M'){
