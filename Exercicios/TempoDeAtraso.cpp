@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-    int MinutoDeChegada, HoraDaChegada, HoraAtual, MinutoAtual, HoraDaReuniao, MinutoDaReuniao;
-    int ReuniaoMinutos, ChegadaMinutos;
+    int MinutoDeChegada = 0, HoraDaChegada= 0, HoraAtual= 0, MinutoAtual= 0, HoraDaReuniao= 0, MinutoDaReuniao= 0;
+    int ReuniaoMinutos= 0, ChegadaMinutos= 0;
 
     cin >> HoraAtual >> MinutoAtual >>  HoraDaReuniao >>  MinutoDaReuniao;
     
