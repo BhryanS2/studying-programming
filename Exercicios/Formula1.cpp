@@ -20,7 +20,7 @@ int main(){
             
             cin>> k;//leio k
             for (int i = 1; i <= k; i++)
-                cin>> pontos[i];//leio os pontos do 1 lugar,2 lugar, ... etc
+                cin>> pontos[i];//leio os pontos do 1 lugar,2 lugar, ... etc,
 
             for (int i = 1; i <= grande_premio; ++i)
             for (int j = 1; j <= pilotos; ++j)
@@ -35,7 +35,7 @@ int main(){
             //Aqui gero a tabela de classificados de cada piloto
             //O vetor classificacao[] ele ta todo zerado
             //Ex.: 
-            //posicao_corrida[linha][coluna] -> posicao_corrida[1][1] é 1...
+            //posicao_corrida[linha][coluna] -> posicao_corrida[1][1] ï¿½ 1...
             //classificacao[1] = classificacao[1] + pontos[ posicao_corrida[1][1] ]
             //classificacao[1] = classificacao[1] + pontos[ 1 ]
             //[3 2 1] -> tabela de pontuacao, 3 esta no indice 1...
