@@ -16,8 +16,8 @@ int main(){
 	
 	ChegadaMinutos = (HoraDaChegada * 60) + MinutoDeChegada;
 	ReuniaoMinutos = (HoraDaReuniao * 60) + MinutoDaReuniao;	
-	
-	if(ChegadaMinutos < ReuniaoMinutos) 
+
+	if(ChegadaMinutos <= ReuniaoMinutos ) 
 		cout << "Sucesso" << endl;
 	else 
 		cout << "Atrasado " << ChegadaMinutos - ReuniaoMinutos<< endl;
