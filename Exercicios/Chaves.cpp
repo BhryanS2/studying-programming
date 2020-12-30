@@ -1,30 +1,44 @@
-#include <bits/stdc++.h>
 #include <iostream>
+#include <stack>
+
 using namespace std;
+
 int main(){
-	int n, cont = 0, cont2 = 0;
-	string linha, lado1,lado2;
+
+	string expressao, S[10000];
+	stack<char> pilha;
+	bool ok;
+	int n = 0;
 	cin >> n;
-	
-	for(int i = 0; i <= n; i++){
-	    getline(cin, linha);
-	    for(int j = 0; j < linha.size(); j++ ){	
-			if(linha[j] == '{') {
-				cont++;
-				lado1 += linha[j];
-			}
-			if(linha[j] == '}'){
-				cont2++;
-				lado2 += linha[j];
+
+	for(int i = 0; i <= n;i++){
+		getline(cin, S[i]);
+		expressao += S[i];
+	}
+
+	ok = true; //Usamos a ideia de que a expressão é válida, até que se prove o contrário
+	for(int i=0;i < expressao.size();i++){ //Passamos por cada caractere da expressão
+		if(expressao[i] == '{'){ //Se achamos um parêntese abrindo, adicionamos ele na pilha
+			pilha.push('{');
+		}else if(expressao[i] == '}'){ //Se achamos um parêntese fechando, verificamos se o topo dapilha tem um parêntese abrindo
+			if(pilha.empty()){ //Se a pilha é vazia, a expressão é inválida
+				ok = false;
+				break;
+			}else{
+				pilha.pop(); //Caso exista um parêntese abrindo no topo da pilha, removemos ele.
 			}
 		}
 	}
-	
-	if(cont % 2 == 0){
-		cout << lado1 << endl;
-	}else{
-		cout << lado2 << endl;
+
+	if(!pilha.empty()){ //Se após processar toda a expressão ainda restar algum parêntese abrindo, a expressão também é inválida
+		ok = false;
 	}
+
+	if(ok){
+		cout<<"S\n";
+	}else{
+		cout<<"N\n";
+	}
+
 	return 0;
 }
-
