@@ -18,7 +18,7 @@ int main(){
             if(S[i] == '{' or S[i] == '[' or S[i] == '('){
                 pilha.push(S[i]);
             }else if(S[i] == '}' or S[i] == ']' or S[i] == ')'){
-                
+
                 if(pilha.empty()){
                     ok = false;
                     break;
