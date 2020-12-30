@@ -33,7 +33,7 @@ int main()
         }
     }
     
-    //Saída de dados
+    //SaÃ­da de dados
     long long soma=0;
     for(int i=1;i<=n;i++)
     {
