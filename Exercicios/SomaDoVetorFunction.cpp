@@ -2,21 +2,21 @@
 
 using namespace std;
 
-int soma_vetor(int n, int v[]){
-    int soma;
-	for(int i = 0; i < n;i++){
-        soma += v[i];
-    }
-    return soma;
+int soma_vetor(int n, int v[]) {
+	int soma;
+	for (int i = 0; i < n;i++) {
+		soma += v[i];
+	}
+	return soma;
 }
 
-int main(){
-	
+int main() {
+
 	int n, v[100100];
 	cin >> n;
-	
-	for(int i=0;i<n;i++)
+
+	for (int i = 0;i < n;i++)
 		cin >> v[i];
 
-	cout << soma_vetor(n,v) << "\n";
+	cout << soma_vetor(n, v) << "\n";
 }

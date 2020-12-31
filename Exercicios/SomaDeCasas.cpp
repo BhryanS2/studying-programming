@@ -5,30 +5,30 @@ using namespace std;
 
 vector< int > v(1000100);
 
-int main(){
+int main() {
 
   int n, somaTotal, arr1, arr2;
 
   cin >> n;
 
-  for (int i = 1; i <= n; i++){
+  for (int i = 1; i <= n; i++) {
     cin >> v[i];
   }
 
   cin >> somaTotal;
 
-  for (int l = 1, r = n; l < r;){
-    if (v[l] + v[r] == somaTotal){
-      arr1 =  v[l];
+  for (int l = 1, r = n; l < r;) {
+    if (v[l] + v[r] == somaTotal) {
+      arr1 = v[l];
       arr2 = v[r];
       break;
     }
 
-    if (v[l] + v[r] < somaTotal){
+    if (v[l] + v[r] < somaTotal) {
       l++;
     }
 
-    if (v[l] + v[r] > somaTotal){
+    if (v[l] + v[r] > somaTotal) {
       r--;
     }
   }
