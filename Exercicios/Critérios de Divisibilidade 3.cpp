@@ -1,9 +1,9 @@
 #include<bits/stdc++.h>
-int main(){
+int main() {
     int x;
-    scanf("%d",&x);
+    scanf("%d", &x);
 
-    if(x % 11 == 0) printf("S\n");
+    if (x % 11 == 0) printf("S\n");
     else printf("N\n");
- return 0;   
+    return 0;
 }

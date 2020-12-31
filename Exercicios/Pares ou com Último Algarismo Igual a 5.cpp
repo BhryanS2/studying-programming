@@ -1,17 +1,17 @@
 #include<bits/stdc++.h>
-int main(){
-	int x,y,z;
-	int i=0;
-	scanf("%d %d %d",&x,&y,&z);
-	if(x%2==0 || x%5==0){
+int main() {
+	int x, y, z;
+	int i = 0;
+	scanf("%d %d %d", &x, &y, &z);
+	if (x % 2 == 0 || x % 5 == 0) {
 		i++;
 	}
-	if(y%2==0 || y%5==0){
+	if (y % 2 == 0 || y % 5 == 0) {
 		i++;
 	}
-	if(z%2==0 || z%5==0){
+	if (z % 2 == 0 || z % 5 == 0) {
 		i++;
 	}
-	printf("%d",i);
+	printf("%d", i);
 	return 0;
 }

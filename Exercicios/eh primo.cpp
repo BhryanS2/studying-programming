@@ -2,29 +2,31 @@
 
 using namespace std;
 
-bool eh_primo(int x){
+bool eh_primo(int x) {
 	int cont = 0;
-	for(int i = 1; i <= x; i++){
-		if(x % i == 0){
+	for (int i = 1; i <= x; i++) {
+		if (x % i == 0) {
 			cont++;
 		}
 	}
-	
-	if(cont == 2){
+
+	if (cont == 2) {
 		return true;
-	}else{
+	}	
+else {
 		return false;
 	}
 }
 
-int main(){
+int main() {
 	int x;
 
-	cin>>x;
+	cin >> x;
 
-	if(eh_primo(x)){
+	if (eh_primo(x)) {
 		cout << "S" << "\n";
-	}else{
+	}	
+else {
 		cout << "N" << "\n";
 	}
 }

@@ -1,31 +1,31 @@
 #include<bits/stdc++.h>
-int main(){
-	int n,num1,num2,resultado;
+int main() {
+	int n, num1, num2, resultado;
 	char sinal[3];
-	
-	scanf("%d",&n);
 
-	scanf("%d",&num1);
+	scanf("%d", &n);
 
-	scanf("%c",&sinal[0]);
+	scanf("%d", &num1);
 
-	scanf("%d",&num2);
-	
-	if(sinal[0]=='+'){
-		resultado=num1+num2;
-		if(resultado>n){
+	scanf("%c", &sinal[0]);
+
+	scanf("%d", &num2);
+
+	if (sinal[0] == '+') {
+		resultado = num1 + num2;
+		if (resultado > n) {
 			printf("OVERFLOW");
-		}else{
+		} else {
 			printf("OK");
 		}
-	}else if(sinal[0]=='*'){
-		resultado=num1*num2;
-		if(resultado>n){
+	} else if (sinal[0] == '*') {
+		resultado = num1 * num2;
+		if (resultado > n) {
 			printf("OVERFLOW");
-		}else{
+		} else {
 			printf("OK");
 		}
 	}
-	
+
 	return 0;
 }

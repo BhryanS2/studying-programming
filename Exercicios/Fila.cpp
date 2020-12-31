@@ -4,12 +4,12 @@ using namespace std;
 
 vector<int> fila;
 
-int main(){
-	
-    int n,m;
+int main() {
+
+    int n, m;
     cin >> n;
-    
-    for(int i = 0; i < n; i++){
+
+    for (int i = 0; i < n; i++) {
         int tmp;
         cin >> tmp;
 
@@ -17,23 +17,23 @@ int main(){
     }
 
     cin >> m;
-    
+
     set<int> sai;
-    
-    for(int i = 0; i < m; i++){
+
+    for (int i = 0; i < m; i++) {
         int tmp;
-        cin >> tmp; 
-    
+        cin >> tmp;
+
         sai.insert(tmp);
     }
 
-    for(int i = 0; i < n; i++){
-        if(sai.find(fila[i]) == sai.end()){
+    for (int i = 0; i < n; i++) {
+        if (sai.find(fila[i]) == sai.end()) {
             cout << fila[i] << " ";
         }
     }
-    
-    cout<<endl;
+
+    cout << endl;
 
     return 0;
 }

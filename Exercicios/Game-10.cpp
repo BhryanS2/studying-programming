@@ -2,11 +2,11 @@
 
 using namespace std;
 
-int main(){
+int main() {
     int N, D, A, cont = 0;
     cin >> N >> D >> A;
-    for(int i = 150; i != 0; --i){
-        if (A == D){
+    for (int i = 150; i != 0; --i) {
+        if (A == D) {
             cout << cont;
             break;
         }

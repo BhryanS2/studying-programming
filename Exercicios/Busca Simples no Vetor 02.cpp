@@ -24,7 +24,7 @@ int main(){
 		cout << cont << endl;
 		for(int i = 0; i < v2.size(); i++){
 			if(v[i] == x){
-				cout << i << " ";	
+				cout << i << " ";
 			}
 		}
 	}
