@@ -1,24 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main(){
-	int n,m,x,v[105],c = 0;
+int main() {
+	int n, m, x, v[105], c = 0;
 	cin >> n >> m;
-	for(int i = 1; i <= n; i++){
+	for (int i = 1; i <= n; i++) {
 		v[i] = 0;
 	}
-	
-	for(int i = 0; i < m; i++){
+
+	for (int i = 0; i < m; i++) {
 		cin >> x;
 		v[x] = 1;
 	}
-	
-	for(int i = 1; i <= n; i++){
-		if(v[i] == 0){
+
+	for (int i = 1; i <= n; i++) {
+		if (v[i] == 0) {
 			c++;
 		}
 	}
-	cout << c <<" ";
-	
+	cout << c << " ";
+
 	return 0;
 }
 
