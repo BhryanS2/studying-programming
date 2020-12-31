@@ -2,8 +2,8 @@
 
 using namespace std;
 
-int hanoi(int n){
-	if (n == 1){
+int hanoi(int n) {
+	if (n == 1) {
 		return 1;
 	}
 
@@ -11,12 +11,12 @@ int hanoi(int n){
 
 }
 
-int main(){
+int main() {
 	int num = 1;
 	int cont = 1;
-	while (num != 0){
+	while (num != 0) {
 		cin >> num;
-		if (num == 0){
+		if (num == 0) {
 			exit(0);
 		}
 		cout << "Teste " << cont << endl << hanoi(num) << endl << endl;

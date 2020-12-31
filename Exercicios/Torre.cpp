@@ -8,12 +8,12 @@ int k[1005]; // faco um vetor coma soma de todas as linhas
 vector <int> r; // faco meu vector de respostas
 int m[1005][1005]; // faco minha matriz com limite ate 10 elevado a 3
 
-int ord(int a, int b){ // faco uma função comum para que meu vetor seja ordenado do maior para o menor
+int ord(int a, int b) { // faco uma funï¿½ï¿½o comum para que meu vetor seja ordenado do maior para o menor
 
     return a > b; // retorno a  > b
 }
 
-int main(){ //declaro minha main
+int main() { //declaro minha main
 
     cin >> n; // pego o valor de n
 
@@ -23,14 +23,14 @@ int main(){ //declaro minha main
         }
     }
 
-    for (int i = 0; i < n; i++) { // faço a soma de cada linha e cada coluna
+    for (int i = 0; i < n; i++) { // faï¿½o a soma de cada linha e cada coluna
         for (int j = 0; j < n; j++) {
             v[i] += m[i][j];
             k[j] += m[i][j];
         }
     }
 
-    for (int i = 0; i < n; i++) { //faço o peso de cada numero
+    for (int i = 0; i < n; i++) { //faï¿½o o peso de cada numero
         for (int j = 0; j < n; j++) {
             y = k[j] + v[i] - (2 * m[i][j]);
             r.push_back(y);
@@ -38,8 +38,8 @@ int main(){ //declaro minha main
     }
 
 
-    sort(r.begin(), r.end(), ord); // ordeno meu vetor r com base na função ord
-    
+    sort(r.begin(), r.end(), ord); // ordeno meu vetor r com base na funï¿½ï¿½o ord
+
     cout << r[0]; // imprimo a primeira casa do vetor r
 
     return 0; // termino meu cod

@@ -1,22 +1,22 @@
 #include <iostream>
 using namespace std;
 
-string title(string F){
+string title(string F) {
 	F[0] = toupper(F[0]);
-	for (int i = 1; i < F.size(); i++){
-		if (F[i-1] == ' '){
+	for (int i = 1; i < F.size(); i++) {
+		if (F[i - 1] == ' ') {
 			F[i] = toupper(F[i]);
 		}
-		else{
+		else {
 			F[i] = tolower(F[i]);
 		}
-  	}
-  	
+	}
+
 	return F;
-	
+
 }
 
-int main(){ 
+int main() {
 	string F;
 
 	getline(cin, F);
