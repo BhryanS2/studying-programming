@@ -15,7 +15,6 @@ int main() {
     
     for(int i = 0; i < v.size(); i ++){
         if(v[i] + v[n - 1 - i] == soma){
-            cont = true;
         }
     }
     
