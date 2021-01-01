@@ -1,39 +1,39 @@
 #include <bits/stdc++.h>
 #include <iostream>
 using namespace std;
-int main(){
-	//m é a matriz, f é a força
+int main() {
+	//m ï¿½ a matriz, f ï¿½ a forï¿½a
 	int m, f;
 	cin >> m >> f;
 	string str[m], res[m];
-	
+
 	int matriz[m][f];
-	
-	for(int i = 0; i < m; i++){
+
+	for (int i = 0; i < m; i++) {
 		getline(cin, str[i]);
-//		for(int j = 0; j < m; j++) {
-//			res[i] += str[i][j];
-//		}
+		//		for(int j = 0; j < m; j++) {
+		//			res[i] += str[i][j];
+		//		}
 	}
 	cout << endl;
-	for(int i = 0; i < m; i++){
-		
-		for(int j = 0; j < m; j++) {
-			if(str[i][j] <= '6' ){
+	for (int i = 0; i < m; i++) {
+
+		for (int j = 0; j < m; j++) {
+			if (str[i][j] <= '6') {
 				str[i][j] = '*';
 			}
 		}
 	}
-	
-	for(int i = 0; i < m; i++){
-		
-		for(int j = 0; j < m; j++) {
-		    cout << str[i][j] << " ";
+
+	for (int i = 0; i < m; i++) {
+
+		for (int j = 0; j < m; j++) {
+			cout << str[i][j] << " ";
 		}
 		cout << endl;
-		
+
 	}
-	
+
 	return 0;
 }
 
