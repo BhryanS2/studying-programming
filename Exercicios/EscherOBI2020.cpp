@@ -24,7 +24,8 @@ int main() {
                 cont = true;
             }
         }
-    } else {
+    }
+    else {
         //pego o meio se número for ímpar
         meio = (n + 1) / 2;
         for (int i = 0; i < v.size(); i++) {
