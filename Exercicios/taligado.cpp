@@ -3,18 +3,13 @@
 #include <algorithm>
 
 using namespace std;
-#define MAXN 100001
-typedef vector<int> vi;
-
 int n, m;
-vi v[MAXN];
 
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+  int t, a, b;
   
   cin >> n >> m;
-  int t, a, b;
+  vector<int> v[100001];
 
   while(m--) {
     cin >> t >> a >> b;
