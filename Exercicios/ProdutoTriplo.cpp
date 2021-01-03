@@ -11,9 +11,6 @@ int main() {
         cin >> x;
         v.push_back(x);
     }
-
-
-
     cout << mult << endl;
 
 }
