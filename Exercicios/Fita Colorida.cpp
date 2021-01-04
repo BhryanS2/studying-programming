@@ -17,9 +17,7 @@ int main() {
 				if (v[x] != 0) {
 					c++;
 					v[x] = min(9, c);
-				} else {
-					c = 0;
-				}
+				} else c = 0;
 			}
 		}
 	}
