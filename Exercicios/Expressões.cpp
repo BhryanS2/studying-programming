@@ -14,6 +14,7 @@ int main(){
     for(int j = 0; j < n; j ++){
     	
         cin >> S;
+
         for(int i = 0; i < S.size(); i++){
         	
             if(S[i] == '{' or S[i] == '[' or S[i] == '('){
