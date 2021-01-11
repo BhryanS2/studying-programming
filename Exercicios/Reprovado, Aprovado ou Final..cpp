@@ -1,17 +1,16 @@
 #include<bits/stdc++.h>
+using namespace std;
+
 int main() {
 	double a, b, media, p1, p2;
-	scanf("%lf", &a);
-	scanf("%lf", &b);
+	cin >> a >> b;
 	p1 = 2;
 	p2 = 3;
-	media = (a * p1 + b * p2) / (p1 + p2);
+	media = (a * 2 + b * 3) / 5;
 
-	if (media >= 7.0)
-		printf("Aprovado");
-	else if (media < 3.0)
-		printf("Reprovado");
-	else
-		printf("Final");
+	if (media >= 7.0) cout << "Aprovado" << endl;
+	else if (media < 3.0) cout << "Reprovado";
+	else cout << "Final";
+	
 	return 0;
 }
