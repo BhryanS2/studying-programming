@@ -39,4 +39,3 @@ int main() {
     }
     cout << resp << endl;
 }
-//69608841
