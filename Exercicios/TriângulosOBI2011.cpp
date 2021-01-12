@@ -8,9 +8,11 @@ typedef long long int li;
 
 string res(int c, int a, int b) {
     /*
+
     Se c² = b² + a²  =>  triângulo retângulo
     Se c² < b² + a²  => triângulo acutângulo
     Se c² > b² + a² => triângulo obtusângulo
+    
     */
     if (a == (c + b)) return "r";
     else if (a < (c + b)) return "a";
