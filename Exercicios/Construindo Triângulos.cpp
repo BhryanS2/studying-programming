@@ -6,36 +6,37 @@ using namespace std;
 
 typedef long long int li;
 
-string res(int c, int a, int b) {
-    /*
-    Se c² = b² + a²  =>  triângulo retângulo
-    Se c² < b² + a²  => triângulo acutângulo
-    Se c² > b² + a² => triângulo obtusângulo
-    */
-    if (a == (c + b)) return "r";
-    else if (a < (c + b)) return "a";
-    else if (a > (c + b)) return "o";
+vector <li> v;
+li x, n;
+li a, b, c, maiorArea, result, h;
+
+li QualTrianguloeh(li a, li b, li c) {
+    if (a == (c + b)){
+        maiorArea = a * (b / 2);
+    }else if (a < (c + b)){
+        maiorArea = (a + b + c) / 2;
+    }else if (a > (c + b)){
+        maiorArea = (a + b + c) / 2;
+    }
 }
 
-vector<li> v;
-
 int main() {
-    li a = 0, b = 0, c = 0, aux = 0;
+    cin >> n;
+    for(li i = 0; i < n; i++) {
+        cin >> x;
+        v.push_back(x);
+    }
 
-    cin >> a >> b >> c;
-    v.push_back(a);
-    v.push_back(b);
-    v.push_back(c);
-
-    //faço A virar o maior lado
     sort(v.begin(), v.end());
-    a = v[2];
-    b = v[1];
-    c = v[0];
-    /*
-    se A maior ou igual a C + B, não se forma um triângulo
-    senão ele mostra o retorno da função.
-    */
-    cout << (a >= c + b ? "n" : res(c * c, a * a, b * b)) << endl;
+    for(li i = 0; i < v.size() - 2; i++){
+        a = v[i];
+        b = v[i + 1];
+        c = v[i + 2];
+        result = QualTrianguloeh(a * a, b * b, c * c);
+    }
+    
+    // if (a == (c + b)) return "r";
+    // else if (a < (c + b)) return "a";
+    // else if (a > (c + b)) return "o";
 }
 
