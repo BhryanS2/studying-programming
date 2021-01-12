@@ -1,5 +1,5 @@
-//https://neps.academy/br/exercise/312
-//Triângulos
+//https://neps.academy/br/exercise/681
+//Construindo Triângulos
 #include <bits/stdc++.h>
 #include <math.h>
 using namespace std;
