@@ -14,9 +14,11 @@ string res(int c, int a, int b) {
     Se c² > b² + a² => triângulo obtusângulo
     
     */
+
     if (a == (c + b)) return "r";
     else if (a < (c + b)) return "a";
     else if (a > (c + b)) return "o";
+
 }
 
 vector<li> v;
@@ -34,10 +36,12 @@ int main() {
     a = v[2];
     b = v[1];
     c = v[0];
+
     /*
     se A maior ou igual a C + B, não se forma um triângulo
     senão ele mostra o retorno da função.
     */
+    
     cout << (a >= c + b ? "n" : res(c * c, a * a, b * b)) << endl;
 }
 
