@@ -5,6 +5,7 @@ uma matriz pode ser entendida como vetor de vetores,então para alocar uma matri
 
 #include <bits/stdc++.h>
 #include <stdlib.h>
+using namespace std;
 
 int main() {
     //declaro o ponteiro que aponta para ponteiro

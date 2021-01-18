@@ -5,6 +5,7 @@ realloc(ponteiro, tamaho em bytes);
 */
 #include <bits/stdc++.h>
 #include <stdlib.h>
+using namespace std;
 
 int main() {
     int *p;
