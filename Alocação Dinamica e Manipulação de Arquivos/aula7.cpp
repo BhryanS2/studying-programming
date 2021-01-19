@@ -23,8 +23,11 @@ using namespace std;
 
 int main() {
     FILE *ponteiro;
+    //nessa operação ele apga e escrefve tudo novamente
+    //ponteiro = fopen("arquivo.txt", "w");
 
-    ponteiro = fopen("arquivo.txt", "w");
+    //nesta operação ele apenas escreve mais coisas não apaga nada
+    ponteiro = fopen("arquivo.txt", "a");
 
     if(ponteiro == NULL) cout << "arquivo nao foi aberto";
     else {
@@ -33,8 +36,15 @@ int main() {
         //fputc('A', ponteiro);
 
         //escreve uma string no txt
-        fputs("NepsAcademy", ponteiro);
-        
+        // fputs("NepsAcademy\n", ponteiro);
+        // fputs("é\n", ponteiro);
+        // fputs("muito boa", ponteiro);
+
+        //escreve uma string em um formato de printf
+        fprintf( ponteiro, "NepsAcademy %d + %d = %d", 11, 10, 10 + 11);
+
+
+        //fecha o arquivo
         fclose( ponteiro );
     }
 }
