@@ -30,7 +30,10 @@ int main() {
     else {
         cout << "arquivo aberto";
         //escreve X no documento
-        fputc('X', ponteiro);
+        fputc('A', ponteiro);
+        fputc('B', ponteiro);
+        fputc('C', ponteiro);
+        
         fclose( ponteiro );
     }
 }
