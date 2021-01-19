@@ -30,9 +30,10 @@ int main() {
     else {
         cout << "arquivo aberto";
         //escreve X no documento
-        fputc('A', ponteiro);
-        fputc('B', ponteiro);
-        fputc('C', ponteiro);
+        //fputc('A', ponteiro);
+
+        //escreve uma string no txt
+        fputs("NepsAcademy", ponteiro);
         
         fclose( ponteiro );
     }
