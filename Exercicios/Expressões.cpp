@@ -14,7 +14,6 @@ int main(){
 	bool ok = true;
 
     cin >> n;//([{}])
-
     
     for(int j = 0; j < n; j ++){
         getline(cin, s);
