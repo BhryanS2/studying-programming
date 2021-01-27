@@ -1,3 +1,8 @@
+/*
+Todos os Divisores
+https://neps.academy/br/exercise/216
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

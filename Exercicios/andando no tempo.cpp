@@ -1,3 +1,9 @@
+/*
+Andando no Tempo
+https://neps.academy/br/exercise/111
+Fonte: Maratona de Programação da SBC 2016
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){

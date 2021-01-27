@@ -1,3 +1,8 @@
+/*
+Botas Trocadas
+https://neps.academy/br/exercise/19
+Fonte: OBI 2017 - Primeira Fase
+*/
 #include <bits/stdc++.h>
 #include <stdio.h>
 using namespace std;

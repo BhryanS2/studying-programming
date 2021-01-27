@@ -1,3 +1,9 @@
+/*
+https://neps.academy/br/exercise/193
+A Limonada de Manolo
+
+*/
+
 #include <bits/stdc++.h>
 int main() {
 	int n, c, valor = 0;

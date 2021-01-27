@@ -1,3 +1,9 @@
+/*
+Álbum da Copa
+https://neps.academy/br/exercise/163
+Fonte: OBI 2018 - Primeira Fase
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
