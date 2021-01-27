@@ -10,7 +10,7 @@ Fonte: OBI 2008 - Primeira Fase
 
 #include <bits/stdc++.h>
 using namespace std;
-vector<int> FaixaPreimo, RepresentacaoPremio, Ogros;
+vector<int> FaixaPreimo, RepresentacaoPremio, Ogros, FilaFinal;
 
 int main() {
     int n, m, x;
@@ -33,8 +33,12 @@ int main() {
     }
 
     for(int i = 0; i < Ogros.size(); i++){
-        if(Ogros[i] >= FaixaPreimo[0]){
-            
+        if(Ogros[i] == FaixaPreimo[0]){
+            FilaFinal[i] = FaixaPreimo[0];
         }
+    }
+
+    for(int i = 0; i < Ogros.size(); i++){
+        cout << FilaFinal[i] << " ";
     }
 }
