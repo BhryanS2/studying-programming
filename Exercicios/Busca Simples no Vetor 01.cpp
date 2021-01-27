@@ -1,3 +1,7 @@
+/*
+https://neps.academy/br/exercise/395
+Busca Simples no Vetor 01
+*/
 #include <bits/stdc++.h>
 #include <stdio.h>
 using namespace std;

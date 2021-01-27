@@ -1,5 +1,11 @@
+/*
+https://neps.academy/br/exercise/56
+Chaves
+Fonte: OBI 2016 - Primeira Fase
+*/
 #include <iostream>
 #include <stack>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -20,8 +26,7 @@ int main() {
 	for (int i = 0;i < expressao.size();i++) { //Passamos por cada caractere da expressão
 		if (expressao[i] == '{') { //Se achamos um parêntese abrindo, adicionamos ele na pilha
 			pilha.push('{');
-		}		
-		else if (expressao[i] == '}') { //Se achamos um parêntese fechando, verificamos se o topo dapilha tem um parêntese abrindo
+		} else if (expressao[i] == '}') { //Se achamos um parêntese fechando, verificamos se o topo dapilha tem um parêntese abrindo
 			if (pilha.empty()) { //Se a pilha é vazia, a expressão é inválida
 				ok = false;
 				break;
