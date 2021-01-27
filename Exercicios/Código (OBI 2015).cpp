@@ -1,24 +1,30 @@
+/*
+Código (OBI 2015)
+https://neps.academy/br/exercise/47
+Fonte: OBI 2015 - Segunda Fase
+*/
 #include<bits/stdc++.h>
 using namespace std;
+
 int main() {
-	int n, cont = 0;
+  int n, cont = 0;
 
-	cin >> n;
-	vector<int>v(n);
+  cin >> n;
+  vector<int>v(n);
 
-	for (int i = 0;i < n; i++) {
-		cin >> v[i];
-	}
+  for (int i = 0;i < n; i++) {
+    cin >> v[i];
+  }
 
-	for (int i = 0;i < n - 2; i++) {
-		if (v[i] == 1) {
-			if (v[i + 1] == 0 && v[i + 2] == 0) {
-				cont++;
-			}
-		}
-	}
-	
-	cout << cont;
+  for (int i = 0;i < n - 2; i++) {
+    if (v[i] == 1) {
+      if (v[i + 1] == 0 && v[i + 2] == 0) {
+        cont++;
+      }
+    }
+  }
 
-	return 0;
+  cout << cont;
+
+  return 0;
 }

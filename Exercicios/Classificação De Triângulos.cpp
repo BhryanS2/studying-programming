@@ -1,5 +1,7 @@
-//https://neps.academy/br/exercise/312
-//Triângulos
+/*
+Classificação de triângulos
+https://neps.academy/br/exercise/663
+*/
 #include <bits/stdc++.h>
 #include <math.h>
 using namespace std;
@@ -31,7 +33,7 @@ bool condicao(int a, int b, int c) {
 
 int triangulos(int a, int b, int c){
     /*
-    1-Isósceles, 
+    1-Isósceles,
     2-Escaleno
     3-Equilátero
     */
@@ -45,7 +47,7 @@ int main() {
 
     cin >> a >> b >> c;
     bool veradeiroOuFalso = condicao(a, b, c);
-    
+
     if (veradeiroOuFalso) cout << "S" << endl << triangulos(a, b, c) << endl;
     else cout << "N" << endl;
 }

@@ -1,18 +1,23 @@
+/*
+Consecutivos
+https://neps.academy/br/exercise/110
+Fonte: OBI 2012 - Primeira Fase
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-    int n, cont = 1, resposta = 0;
-    long int v, aux = 0;
+  int n, cont = 1, resposta = 0;
+  long int v, aux = 0;
 
-    cin >> n;
+  cin >> n;
 
-    for (int i = 0; i < n; i++) {
-        cin >> v;
-        cont = v == aux ? cont + 1 : 1;
-        aux = v;
-        resposta = cont > resposta ? cont : resposta;
-    }
+  for (int i = 0; i < n; i++) {
+    cin >> v;
+    cont = v == aux ? cont + 1 : 1;
+    aux = v;
+    resposta = cont > resposta ? cont : resposta;
+  }
 
-    cout << resposta;
+  cout << resposta;
 }
