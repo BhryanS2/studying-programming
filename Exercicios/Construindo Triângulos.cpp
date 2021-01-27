@@ -1,5 +1,8 @@
-//https://neps.academy/br/exercise/681
-//Construindo Triângulos
+/*
+https://neps.academy/br/exercise/681
+Construindo Triângulos
+não acabdo
+*/
 #include <bits/stdc++.h>
 #include <math.h>
 using namespace std;
@@ -34,7 +37,7 @@ int main() {
         c = v[i + 2];
         result = QualTrianguloeh(a * a, b * b, c * c);
     }
-    
+
     // if (a == (c + b)) return "r";
     // else if (a < (c + b)) return "a";
     // else if (a > (c + b)) return "o";
