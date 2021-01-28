@@ -1,3 +1,8 @@
+/*
+https://neps.academy/br/exercise/3
+Gincana (OBI 2016)
+Fonte: OBI 2016 - Segunda Fase
+*/
 #include <bits/stdc++.h>
 
 using namespace std;

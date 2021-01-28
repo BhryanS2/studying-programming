@@ -1,3 +1,8 @@
+/*
+https://neps.academy/br/exercise/49
+Fita Colorida
+Fonte: OBI 2015 - Primeira Fase
+*/
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,3 +1,8 @@
+/*
+Fuga com Helicóptero
+https://neps.academy/br/exercise/5
+Fonte: OBI 2016 - Segunda Fase
+*/
 #include<bits/stdc++.h>
 int main() {
 	int h, p, f, s;

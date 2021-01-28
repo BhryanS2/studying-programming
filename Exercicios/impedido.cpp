@@ -1,3 +1,8 @@
+/*
+https://neps.academy/br/exercise/46
+Impedido!
+Fonte: OBI 2015 - Segunda Fase
+*/
 #include <bits/stdc++.h>
 #include <stdio.h>
 using namespace std;
