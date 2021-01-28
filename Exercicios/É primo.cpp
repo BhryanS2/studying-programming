@@ -1,3 +1,7 @@
+/*
+É primo?
+https://neps.academy/br/exercise/280
+*/
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
@@ -20,7 +24,7 @@ int main() {
 
   if (e_primo(x)) {
     cout << "S" << "\n";
-  }  
+  }
 else {
     cout << "N" << "\n";
   }
