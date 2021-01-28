@@ -1,5 +1,11 @@
+/*
+https://neps.academy/br/exercise/53
+Plantação de Morangos
+Fonte: OBI 2016 - Primeira Fase
+*/
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
 	int comp1, larg1, comp2, larg2, total1, total2;
 

@@ -1,14 +1,24 @@
-#include<bits/stdc++.h>
-int main(){
-	int dias,i,v,soma;
-	soma=0;//soma recebe 0;
-	scanf("%d",&dias);//leio os dias
-	for(i=0;soma<1000000 && i<=dias;i++){
-		//i recebe 0,enquanto soma menos que um milh�o e i menor iqual a dias 
-		scanf("%d",&v);
-		soma=soma+v;
-	}
-	printf("%d",i);
-	return 0;
-}
+/*
+https://neps.academy/br/exercise/48
+Prêmio do Milhão
+Fonte: OBI 2015 - Primeira Fase
+*/
+#include <bits/stdc++.h>
+using namespace std;
 
+int main() {
+  int Dias, AcessoPorDia, Milhao = 0, DiasParaMilhao = 0;
+
+  cin >> Dias;
+
+  for (int i = 0; i < Dias; i++) {
+    cin >> AcessoPorDia;
+    if (Milhao < 1000000) {
+      Milhao += AcessoPorDia;
+      DiasParaMilhao++;
+    }
+  }
+
+  cout << DiasParaMilhao;
+
+}

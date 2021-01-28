@@ -1,3 +1,6 @@
+/*
+faço nem ideia de onde veio isso
+*/
 #include<bits/stdc++.h>
 #include<math.h>
 int main(){
