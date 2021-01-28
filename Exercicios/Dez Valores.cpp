@@ -1,3 +1,8 @@
+/*
+https://neps.academy/br/exercise/152
+Dez Valores
+
+*/
 #include<bits/stdc++.h>
 int main() {
 	int x, cont;

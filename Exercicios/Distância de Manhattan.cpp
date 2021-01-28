@@ -1,3 +1,8 @@
+/*
+https://neps.academy/br/exercise/335
+Distância de Manhattan
+Fonte: OBI 2013 - Segunda Fase
+*/
 #include <bits/stdc++.h>
 using namespace std;
 int main() {

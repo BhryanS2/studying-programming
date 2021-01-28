@@ -1,3 +1,8 @@
+/*
+https://neps.academy/br/exercise/182
+Divisores de um Número
+
+*/
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -32,7 +37,7 @@ int main() {
 
 		cout << "Primo" << endl;
 
-	}	
+	}
 else {
 
 		cout << "Nao primo" << endl;

@@ -1,3 +1,7 @@
+/*
+Primo
+https://neps.academy/br/exercise/247
+*/
 #include <iostream>
 
 using namespace std;
@@ -12,7 +16,7 @@ bool eh_primo(int x) {
 
 	if (cont == 2) {
 		return true;
-	}	
+	}
 else {
 		return false;
 	}
@@ -25,7 +29,7 @@ int main() {
 
 	if (eh_primo(x)) {
 		cout << "S" << "\n";
-	}	
+	}
 else {
 		cout << "N" << "\n";
 	}
