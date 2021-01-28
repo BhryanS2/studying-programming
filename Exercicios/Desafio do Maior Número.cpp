@@ -1,6 +1,9 @@
+/*
+https://neps.academy/br/exercise/323
+Desafio do Maior Número
+Fonte: OBI 2012 - Primeira Fase
+*/
 #include <bits/stdc++.h>
-#include <iostream>
-#include <string>
 
 using namespace std;
 
@@ -15,12 +18,6 @@ int main() {
 		}
 		if (v[i] == 0)break;
 	}
-	//	i = 0;
-	//	while(1){
-	//    	i= i + 1;
-	//    	cout << v[i]<< " ";
-	//    	if(v[i] == 0)break;
-	//	}
 
 	cout << maior;
 
