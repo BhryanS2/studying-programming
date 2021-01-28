@@ -11,16 +11,16 @@ double x, res;
 vector<double>v;
 
 int main() {
-    cin >> n;
+  cin >> n;
 
-    for(int i = 0; i < n; i++) {
-        cin >> x;
-        v.push_back(x * 100);
-    }
+  for (int i = 0; i < n; i++) {
+    cin >> x;
+    v.push_back(x * 100);
+  }
 
-    res = v[n - 1] - v[0];
-    
-    cout << fixed << setprecision(2) << res;
+  res = v[n - 1] - v[0];
+
+  cout << fixed << setprecision(2) << res;
 }
 
 /*

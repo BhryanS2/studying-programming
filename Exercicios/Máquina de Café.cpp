@@ -1,3 +1,8 @@
+/*
+https://neps.academy/br/exercise/95
+Máquina de Café
+Fonte: Maratona de Programação da SBC 2017
+*/
 #include<bits/stdc++.h>
 #include<cmath>
 using namespace std;

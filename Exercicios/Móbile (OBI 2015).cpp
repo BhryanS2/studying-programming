@@ -1,3 +1,8 @@
+/*
+https://neps.academy/br/exercise/50
+Móbile (OBI 2015)
+Fonte: OBI 2015 - Primeira Fase
+*/
 #include<bits/stdc++.h>
 int main() {
 	int a, b, c, d;
