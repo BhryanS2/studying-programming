@@ -1,3 +1,8 @@
+/*
+https://neps.academy/br/exercise/400
+Ordenação Simples
+
+*/
 #include <bits/stdc++.h>
 #include <algorithm>
 using namespace std;
