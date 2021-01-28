@@ -14,7 +14,7 @@ int main(){
 	bool ok = true;
 
     cin >> n;//([{}])
-    
+
     for(int j = 0; j < n; j ++){
         getline(cin, s);
         for(int i = 0; i < s.size(); i++){
@@ -24,7 +24,7 @@ int main(){
                 else s[i] == '[' ? pilha2.push(s[i]) : pilha3.push(s[i]);
             }else if(s[i] == '}' or s[i] == ']' or s[i] == ')'){
                 if(s[i] == '}'){
-                    if (pilha1.empty()) { 
+                    if (pilha1.empty()) {
                         pilha1.pop();
                         ok = false;
                         break;
@@ -32,7 +32,7 @@ int main(){
                         pilha1.pop();
                     }
                 }else if(s[i] == ']'){
-                    if (pilha2.empty()) { 
+                    if (pilha2.empty()) {
                         ok = false;
                         break;
                     } else {
