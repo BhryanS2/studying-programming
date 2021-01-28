@@ -1,3 +1,8 @@
+/*
+https://neps.academy/br/exercise/187
+Inverso
+
+*/
 #include<bits/stdc++.h>
 int main() {
 	int v[10];

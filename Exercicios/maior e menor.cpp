@@ -1,3 +1,8 @@
+/*
+https://neps.academy/br/exercise/172
+Maior e Menor
+
+*/
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
@@ -9,12 +14,8 @@ int main() {
 	sort(v, v + n);
 
 	for (int i = 0; i < n;i++) {
-		if (i == 0) {
-			menor = v[i];
-		}
-		if (i == (n - 1)) {
-			maior = v[i];
-		}
+		if (i == 0) menor = v[i];
+		if (i == (n - 1)) maior = v[i];
 	}
 
 	cout << maior << endl << menor << endl;

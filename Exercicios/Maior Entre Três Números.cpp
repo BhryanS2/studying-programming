@@ -1,37 +1,19 @@
+/*
+https://neps.academy/br/exercise/150
+Maior Entre Três Números
+*/
 #include<bits/stdc++.h>
+using namespace std;
+int n;
+vector <int> v;
+
 int main() {
-	int a, n1, n2, n3;
-	scanf("%d %d %d", &n1, &n2, &n3);
-	if (n1 > n2 && n1 > n3) {
-		printf("%d", n1);
-
-	} else if (n1 == n2 && n1 > n3) {
-		printf("%d", n1);
-
-	} else if (n1 > n2 && n1 == n3) {
-		printf("%d", n1);
-		//numero 2
-	} else if (n2 > n1 && n2 > n3) {
-		printf("%d", n2);
-
-	} else if (n2 == n1 && n2 > n3) {
-		printf("%d", n2);
-
-	} else if (n2 > n1 && n2 == n3) {
-		printf("%d", n2);
-		//numero 3
-	} else if (n3 > n2 && n3 > n1) {
-		printf("%d", n3);
-
-	} else if (n3 == n2 && n3 > n1) {
-		printf("%d", n3);
-
-	} else if (n3 > n2 && n3 == n1) {
-		printf("%d", n3);
-		//todos iguais
-	} else if (n1 == n2 && n2 == n3) {
-		printf("%d", n1);
-	}
+  for(int i = 0; i < 3; i++){
+    cin >> n;
+    v.push_back(n);
+  }
+  sort(v.begin(), v.end());
+  cout << v[2];
 
 	return 0;
 }
