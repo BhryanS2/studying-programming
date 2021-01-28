@@ -1,16 +1,21 @@
+/*
+https://neps.academy/br/exercise/825
+Fissura Perigosa
+Fonte: OBI 2020 - Primeira Fase - A
+*/
 #include<bits/stdc++.h>
 using namespace std;
 
 int orig[512][512]; //matriz original, dada na entrada.
 
 int dx[5] = {1, 0, -1, 0};
-int dy[5] = {0, 1, 0, -1}; //vetores de auxílio, que servirão como 
+int dy[5] = {0, 1, 0, -1}; //vetores de auxílio, que servirão como
 						   //arestas no grafo.
 
 int n, f;
 
 void dfs(int i, int j){
-	
+
 	orig[i][j] = 100;
 	//definimos a posição i j como 100, valor absurdo
 	//para que, no momento de saída, se reconheca o fato que é de fato uma
