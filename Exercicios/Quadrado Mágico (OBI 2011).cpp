@@ -10,11 +10,13 @@ int main() {
   int n;
   cin >> n;
   int m[n][n];
+
   //leitura da matriz
   for (int i = 0; i < n; i++)
     for (int j = 0; j < n; j++) cin >> m[i][j];
 
 	int f[n * n];
+
   //zero todas as posições de F
   for(int i = 0; i < n * n; i++){
     f[i] = 0;
