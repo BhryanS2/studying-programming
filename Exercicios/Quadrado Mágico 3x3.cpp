@@ -1,3 +1,8 @@
+/*
+https://neps.academy/br/exercise/198
+Quadrado Mágico 3x3
+
+*/
 #include<bits/stdc++.h>
 int main() {
 	int somal = 0, somac = 0, diagonal_P = 0, diagonal_S = 0;

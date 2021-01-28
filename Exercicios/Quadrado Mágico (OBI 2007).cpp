@@ -1,6 +1,12 @@
+/*
+https://neps.academy/br/exercise/236
+Quadrado Mágico (OBI 2007)
+Fonte: OBI 2007 - Primeira Fase
+*/
 #include<bits/stdc++.h>
 #include<stdio.h>
 #include<iostream>
+
 int main() {
 	int n = 0, somal = 0, somac = 0, soma = 0, diagonal_P = 0, diagonal_S = 0;
 	int matriz[15][15], matrizl[15], matrizc[15];
@@ -21,28 +27,22 @@ int main() {
 		}
 		matrizl[l] = somal;
 	}
-	//somando colunas
 
+	//somando colunas
 	for (int c = 0;c < n;c++) {
 		somac = 0;
-		for (int l = 0;l < n;l++) {
-			somac += matriz[l][c];
-		}
+		for (int l = 0;l < n;l++) somac += matriz[l][c];
 		matrizc[c] = somac;
 	}
 
 	//somando a diagonal principal
-	for (int l = 0; l < n; l++) {
-		diagonal_P += matriz[l][l];
-	}
+	for (int l = 0; l < n; l++) diagonal_P += matriz[l][l];
+
 
 	//soamndo a digonal segundaria
 	for (int l = 0;l < n;l++) {
-		for (int c = 0;c < n;c++) {
-			if ((l + c) == (n - 1)) {
-				diagonal_S += matriz[l][c];
-			}
-		}
+		for (int c = 0;c < n;c++)
+			if ((l + c) == (n - 1)) diagonal_S += matriz[l][c];
 		printf("\n");
 	}
 	/*
