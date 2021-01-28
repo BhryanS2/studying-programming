@@ -1,3 +1,8 @@
+/*
+https://neps.academy/br/exercise/243
+Olimpíadas
+Fonte: OBI 2009 - Segunda Fase
+*/
 #include <bits/stdc++.h>
 
 using namespace std;

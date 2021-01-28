@@ -1,30 +1,33 @@
+/*
+O problema 3n+1
+https://neps.academy/br/exercise/259
+*/
 #include <iostream>
 using namespace std;
 
 int cont(int N) {
-    int cont = 0;
-    int auxP, auxI;
-    while (N != 1) {
-        if (N % 2 == 0) {
-            auxP = N / 2;
-            N = auxP;
-            cont++;
-        }
-        else {
-            auxI = (3 * N) + 1;
-            N = auxI;
-            cont++;
-        }
+  int cont = 0;
+  int auxP, auxI;
+  while (N != 1) {
+    if (N % 2 == 0) {
+      auxP = N / 2;
+      N = auxP;
+      cont++;
+    } else {
+      auxI = (3 * N) + 1;
+      N = auxI;
+      cont++;
     }
-    return cont;
+  }
+  return cont;
 }
 
 int main() {
-    int N;
+  int N;
 
-    cin >> N;
+  cin >> N;
 
-    cout << cont(N) << endl;
+  cout << cont(N) << endl;
 
 }
 /*

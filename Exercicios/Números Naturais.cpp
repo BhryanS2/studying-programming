@@ -1,10 +1,12 @@
+/*
+Números Naturais
+https://neps.academy/br/exercise/256
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
 int soma(int x) {
-	if (x == 1) {
-		return x;
-	}
+	if (x == 1) return x;
 	return soma(x - 1) + x;
 }
 
