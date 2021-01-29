@@ -7,36 +7,36 @@ Fonte: OBI 2000 - Fase Única
 using namespace std;
 
 int main() {
-    int teste = 1;
-    while (true) {
-        // lê número de convidados
-        int convidados;
-        cin >> convidados;
-        if (!convidados) break;
+  int teste = 1;
+  while (true) {
+    // lê número de convidados
+    int convidados;
 
+    cin >> convidados;
 
-        // lê entrada e encontra solução
-        int solucao = -1;
-        int posicao = 1;
-        while (posicao <= convidados) {
-            int ingresso;
-            cin >> ingresso;
-            if (posicao == ingresso) {
-                if (solucao != -1)
-                    cerr << "*** + de uma solucao" << endl;
-                else
-                    solucao = posicao;
-            }
-            posicao++;
-        }
+    if (!convidados) break;
 
-        // imprime solução
-        cout << "Teste " << teste << endl;
-        cout << solucao << endl;
-        cout << endl;
+    // lê entrada e encontra solução
+    int solucao = -1;
+    int posicao = 1;
 
-        // vai para próximo teste
-        teste++;
+    while (posicao <= convidados) {
+      int ingresso;
+      cin >> ingresso;
+      if (posicao == ingresso) {
+        if (solucao != -1) cerr << "*** + de uma solucao" << endl;
+        else solucao = posicao;
+      }
+      posicao++;
     }
+
+    // imprime solução
+    cout << "Teste " << teste << endl;
+    cout << solucao << endl;
+    cout << endl;
+
+    // vai para próximo teste
+    teste++;
+  }
 }
 

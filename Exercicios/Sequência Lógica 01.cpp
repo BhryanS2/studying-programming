@@ -1,3 +1,7 @@
+/*
+Sequência Lógica 01
+https://neps.academy/br/exercise/179
+*/
 #include <bits/stdc++.h>
 using namespace std;
 

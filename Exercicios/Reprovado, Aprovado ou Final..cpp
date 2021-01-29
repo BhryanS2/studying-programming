@@ -1,3 +1,7 @@
+/*
+Reprovado, Aprovado ou Final.
+https://neps.academy/br/exercise/147
+*/
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -11,6 +15,6 @@ int main() {
 	if (media >= 7.0) cout << "Aprovado" << endl;
 	else if (media < 3.0) cout << "Reprovado";
 	else cout << "Final";
-	
+
 	return 0;
 }
