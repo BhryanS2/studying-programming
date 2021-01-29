@@ -1,3 +1,7 @@
+/*
+Tempo de Viagem em Segundos
+https://neps.academy/br/exercise/178
+*/
 #include <bits/stdc++.h>
 #include <stdio.h>
 int main() {
@@ -10,9 +14,7 @@ int main() {
 	totm = (minuto2 - minuto1) * 60;
 	total = totdia + toth + totm;
 
-	if (totdia < 0) {
-		totdia = -totdia;
-	}
+	if (totdia < 0) totdia = -totdia;
 
 	printf("%d", total);
 	return 0;

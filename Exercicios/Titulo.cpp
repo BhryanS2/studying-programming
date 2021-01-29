@@ -1,19 +1,18 @@
+/*
+https://neps.academy/br/exercise/242
+Titulo
+*/
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 string title(string F) {
 	F[0] = toupper(F[0]);
 	for (int i = 1; i < F.size(); i++) {
-		if (F[i - 1] == ' ') {
-			F[i] = toupper(F[i]);
-		}
-		else {
-			F[i] = tolower(F[i]);
-		}
+		if (F[i - 1] == ' ') F[i] = toupper(F[i]);
+		else F[i] = tolower(F[i]);
 	}
-
 	return F;
-
 }
 
 int main() {
