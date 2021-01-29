@@ -1,25 +1,23 @@
+/*
+Soma das Diagonais da Matriz 3x3
+https://neps.academy/br/exercise/201
+*/
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
+
 	int m[5][5], soma1 = 0, soma2 = 0;
-	for (int i = 0; i < 3; i++) {
-		for (int j = 0; j < 3; j++) {
-			cin >> m[i][j];
-		}
-	}
+	for (int i = 0; i < 3; i++)
+		for (int j = 0; j < 3; j++) cin >> m[i][j];
+
 	//soma das coluna principal
-	for (int i = 0; i < 3; i++) {
-		soma1 += m[i][i];
-	}
+	for (int i = 0; i < 3; i++) soma1 += m[i][i];
+
 
 	//soma da coluna secundaria
-	for (int i = 0;i < 3; i++) {
-		for (int j = 0;j < 3; j++) {
-			if ((i + j) == (3 - 1)) {
-				soma2 += m[i][j];
-			}
-		}
-	}
+	for (int i = 0;i < 3; i++)
+		for (int j = 0;j < 3; j++)
+			if ((i + j) == (3 - 1)) soma2 += m[i][j];
 
 	//mostrando matriz
 	/*for(int i = 0; i < 3; i++){

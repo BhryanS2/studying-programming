@@ -1,6 +1,12 @@
+/*
+https://neps.academy/br/exercise/326
+Soma do Vetor
+*/
 #include<bits/stdc++.h>
+
+int v[100100], num, soma;
+
 int main() {
-	int v[100100], num, soma = 0;
 	scanf("%d", &num);
 	for (int i = 0; i < num; i++) {
 		scanf("%d", &v[i]);

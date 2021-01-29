@@ -1,4 +1,8 @@
-//O(N)
+/*
+O(N)
+https://neps.academy/br/exercise/255
+Soma de Casas
+*/
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -11,9 +15,7 @@ int main() {
 
   cin >> n;
 
-  for (int i = 1; i <= n; i++) {
-    cin >> v[i];
-  }
+  for (int i = 1; i <= n; i++) cin >> v[i];
 
   cin >> somaTotal;
 
@@ -24,13 +26,9 @@ int main() {
       break;
     }
 
-    if (v[l] + v[r] < somaTotal) {
-      l++;
-    }
+    if (v[l] + v[r] < somaTotal) l++;
+    if (v[l] + v[r] > somaTotal) r--;
 
-    if (v[l] + v[r] > somaTotal) {
-      r--;
-    }
   }
 
   cout << arr1 << " " << arr2 << endl;
