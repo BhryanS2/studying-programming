@@ -1,3 +1,8 @@
+/*
+https://neps.academy/br/exercise/143
+Troco em Moedas
+
+*/
 #include<bits/stdc++.h>
 
 int main() {

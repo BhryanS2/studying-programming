@@ -1,25 +1,30 @@
+/*
+https://neps.academy/br/exercise/156
+Valores Entre Dois Números
+*/
 #include <bits/stdc++.h>
 #include <stdio.h>
 int main() {
-	int a, b, maior, menor, i;
+  int a, b, maior, menor, i;
 
-	scanf("%d%d", &a, &b);
-	
-	if (a > b) {
-		maior = a;
-		menor = b;
-	}
-	else {
-		menor = a;
-		maior = b;
-	}
-	i = menor;
+  scanf("%d%d", &a, &b);
 
-	do {
-		printf("%d ", i);
-		i++;
-	} while (i <= maior);
+  if (a > b) {
+    maior = a;
+    menor = b;
+  }
+  else {
+    menor = a;
+    maior = b;
+  }
 
-	return 0;
+  i = menor;
+
+  do {
+    printf("%d ", i);
+    i++;
+  } while (i <= maior);
+
+  return 0;
 }
 

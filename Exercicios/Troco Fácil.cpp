@@ -1,3 +1,7 @@
+/*
+Troco Fácil
+https://neps.academy/br/exercise/244
+*/
 #include<bits/stdc++.h>
 using namespace std;
 

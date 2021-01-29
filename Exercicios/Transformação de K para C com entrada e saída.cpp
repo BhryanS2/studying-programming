@@ -1,3 +1,7 @@
+/*
+Transformação de K para C com entrada e saída
+https://neps.academy/br/exercise/787
+*/
 #include <bits/stdc++.h>
 #include <stdio.h>
 using namespace std;

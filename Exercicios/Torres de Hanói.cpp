@@ -1,14 +1,16 @@
+/*
+Torres de Hanói
+https://neps.academy/br/exercise/337
+Fonte: OBI 2003 - Fase Única
+*/
 #include <iostream>
 
 using namespace std;
 
 int hanoi(int n) {
-	if (n == 1) {
-		return 1;
-	}
+	if (n == 1) return 1;
 
 	return hanoi(n - 1) * 2 + 1;
-
 }
 
 int main() {
@@ -16,9 +18,9 @@ int main() {
 	int cont = 1;
 	while (num != 0) {
 		cin >> num;
-		if (num == 0) {
-			exit(0);
-		}
+
+		if (num == 0) exit(0);
+
 		cout << "Teste " << cont << endl << hanoi(num) << endl << endl;
 		cont += 1;
 	}
