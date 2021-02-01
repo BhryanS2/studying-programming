@@ -7,7 +7,7 @@ Fonte: OBI 2014 - Primeira Fase
 int main() {
   int p, r;
   scanf("%d %d", &p, &r);
-  if (p == 1 && r == 1) printf("A");
+  if (p && r) printf("A");
   else if (p == 0) printf("C");
   else printf("B");
 

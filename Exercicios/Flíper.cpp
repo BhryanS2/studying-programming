@@ -9,7 +9,7 @@ int main() {
   int p, r;
   cin >> p >> r;
 
-  if (p == 1 && r == 1) cout << "A";
+  if (p && r) cout << "A";
   else if (p == 0) cout << "C";
   else cout << "B";
 
