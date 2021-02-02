@@ -1,61 +1,45 @@
 /*
-14 3
-felipe 4
-alvaro 8
-thiago 1
-rodrigo 3
-robson 2
-fabio 9
-ricardo 11
-rodolfo 0
-andre 14
-arthur 12
-ronaldo 55
-rogerio 30
-lucas 7
-rafael 17
-
-
-Time 1
-andre 14
-fabio 9
-felipe 4
-ronaldo 55 
-thiago 1
-14 + 9 + 4 + 55 + 1 = 28 + 55 = 83
-
-Time 2
-alvaro 8 
-arthur 12
-rodolfo 0
-rodrigo 3
-rogerio 30 
-8 + 12 + 0 + 3 + 30 = 11 + 12 + 30 = 23 + 30 = 53
-
-Time 3
-lucas 7 
-rafael 17
-ricardo 11
-robson 2
-7 + 17 + 11 + 2 = 37
-
-******************************************************
-4 3
-john 3
-richard 0
-greg 100
-rupert 20
-
-Time 1
-greg
-richard
-100
-
-Time 2
-rupert
-20
-
-Time 3
-john
-3
+Times
+https://neps.academy/br/exercise/253
+Fonte: OBI 2010 - Primeira Fase
 */
+#include <bits/stdc++.h>
+using namespace std;
+#define MAX 1005
+int n, t;
+
+int main() {
+  vector< pair<int, string> > v;
+  vector <string> time[MAX];
+  cin >> n >> t;
+  for (int i = 0; i < n; i++) {
+    pair<int, string> temp;
+    cin >> temp.second >> temp.first;
+    v.push_back(temp);
+  }
+
+  sort(v.begin(), v.end());
+
+  //vendo se tudo foi lido e organizado
+  //for (int i = 0; i < n; i++) cout << "first: " << v[i].first << " second: " << v[i].second << endl;
+
+  int qual_time = 1;
+
+  for (int i = v.size() - 1; i >= 0; i--) {
+
+    time[qual_time].push_back(v[i].second);
+    qual_time++;
+
+    if (qual_time > t) qual_time = 1;
+  }
+
+  for (int i = 1; i <= t; i++) {
+    cout << "Time " << i << endl;
+
+    sort(time[i].begin(), time[i].end());
+
+    for (int j = 0; j < time[i].size(); j++) cout << time[i][j] << endl;
+
+    cout << endl;
+  }
+}
