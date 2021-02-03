@@ -60,19 +60,19 @@ void problema() {
     cout << "digite uma operacao, \nop = 0, caixa quebrado \nop = 1, alguem chegou\nop = 2, o caixa atende\n";
     while (cin >> op) { //vamos ler a operação
         if (op == 0) break;
-        //se operação for 0, o caixa do supermecado quebrou
+            //se operação for 0, o caixa do supermecado quebrou
         if (op == 1) {
-        //Algiuém chegou na fila
-        cin >> id;
-        fila.push(id);
+            //Algiuém chegou na fila
+            cin >> id;
+            fila.push(id);
         }
         else if (op == 2) { //o caixa vai atender alguém
-        if (!fila.empty()) {
-            //Se a fila não for vazia, ou seja, tiver alguém na fila
-            fila.pop();
-            //o caixa atende a pessoa da frente da fila,
-            //deletamos essa pessoa da fila
-        }
+            if (!fila.empty()) {
+                //Se a fila não for vazia, ou seja, tiver alguém na fila
+                fila.pop();
+                //o caixa atende a pessoa da frente da fila,
+                //deletamos essa pessoa da fila
+            }
 
         }
     }
