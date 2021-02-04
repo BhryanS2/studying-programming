@@ -1,76 +1,53 @@
-
-#include<bits/stdc++.h>
+/*
+https://neps.academy/br/course/10/lesson/273
+Expressões
+Fonte: OBI 2011 - Segunda Fase
+*/
+#include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    int n;
-    string expressao;
-    vector<char> parenteses, chaves, colchetes;
-    bool okP, okCh, okCo;
+int n;
+vector <char> parenteses, chaves, colchetes;
+string expressao;
 
+int main() {
     cin >> n;
 
     for (int i = 0; i < n; i++) {
+		bool ok = true;
         cin >> expressao;
-        okP = true;
-        okCh = true;
-        okCo = true;
 
-        for (int i = 0; i < expressao.size(); i++) {
-            if (expressao[i] == '(' || expressao[i] == ')') {
-                if (expressao[i] == '(') {
-                    parenteses.push_back('(');
-                    okP = false;
-                } else if (expressao[i] == ')') {
-                    if (parenteses.empty()) {
-                        okP = false;
-                        break;
-                    } else {
-                        parenteses.pop_back();
-                        okP = true;
-                    }
-                }
+        for (int j = 0; j < expressao.size(); j++) {
+            if (expressao[j] == '(') parenteses.push_back('(');
+            else if (expressao[j] == ')') {
+                if (parenteses.empty()) {
+                    ok = false;
+                    break;
+                } else parenteses.pop_back();
             }
 
-            else if (expressao[i] == '{' || expressao[i] == '}') {
-                if (expressao[i] == '{') {
-                    chaves.push_back('{');
-                    okCh = false;
-                }else if (expressao[i] == '}') {
-                    if (chaves.empty()) {
-                        okCh = false;
-                        break;
-                    } else {
-                        chaves.pop_back();
-                        okCh = true;
-                    }
-
-                }
+            if (expressao[j] == '[') colchetes.push_back('[');
+            else if (expressao[j] == ']') {
+                if (colchetes.empty()) {
+                    ok = false;
+                    break;
+                } else colchetes.pop_back();
             }
 
-            else if (expressao[i] == '[' || expressao[i] == ']') {
-                if (expressao[i] == '[') {
-                    colchetes.push_back('[');
-                    okCo = false;
-                }else if (expressao[i] == ']') {
-                    if (colchetes.empty()) {
-                        okCo = false;
-                        break;
-                    } else {
-                        colchetes.pop_back();
-                        okCo = true;
-                    }
-                }
+            if (expressao[j] == '{') chaves.push_back('{');
+            else if (expressao[j] == '}') {
+                if (chaves.empty()) {
+                    ok = false;
+                    break;
+                } else chaves.pop_back();
             }
-
         }
 
-        if (!parenteses.empty() || !colchetes.empty() || !chaves.empty()) {
-            if (!parenteses.empty()) parenteses.clear();
-            if (!colchetes.empty()) colchetes.clear();
-            if (!chaves.empty()) chaves.clear();
-        }
-        if(okCo && okP && okCh) cout << "S" << endl;
-        else cout << "N" << endl;
+        if (!parenteses.empty() || !colchetes.empty() || !chaves.empty()) ok = false;
+        parenteses.clear();
+        colchetes.clear();
+        chaves.clear();
+
+	    cout << (ok ? "S" : "N") << endl;
     }
 }
