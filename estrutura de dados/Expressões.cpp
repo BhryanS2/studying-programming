@@ -9,45 +9,61 @@ using namespace std;
 int n;
 vector <char> parenteses, chaves, colchetes;
 string expressao;
+vector <char> pilha;
 
 int main() {
     cin >> n;
 
     for (int i = 0; i < n; i++) {
-		bool ok = true;
+        bool ok = true;
         cin >> expressao;
 
         for (int j = 0; j < expressao.size(); j++) {
-            if (expressao[j] == '(') parenteses.push_back('(');
-            else if (expressao[j] == ')') {
-                if (parenteses.empty()) {
+            if (expressao[j] == '(' || expressao[j] == '[' || expressao[j] == '{') pilha.push_back(expressao[j]);
+            else if (expressao[j] == ')' || expressao[j] == ']' || expressao[j] == '}') {
+                if (pilha.empty()) {
                     ok = false;
                     break;
-                } else parenteses.pop_back();
-            }
-
-            if (expressao[j] == '[') colchetes.push_back('[');
-            else if (expressao[j] == ']') {
-                if (colchetes.empty()) {
-                    ok = false;
-                    break;
-                } else colchetes.pop_back();
-            }
-
-            if (expressao[j] == '{') chaves.push_back('{');
-            else if (expressao[j] == '}') {
-                if (chaves.empty()) {
-                    ok = false;
-                    break;
-                } else chaves.pop_back();
+                } else {
+                    char temp;
+                    if(expressao[j] == ')') temp = '(';
+                    else if(expressao[j] == ']') temp = '[';
+                    else temp = '{';
+                    //(((()()()()))()())()
+                    if (expressao[j - 1] != temp && expressao[j - 1] != '0') {
+                        ok = false;
+                        //cout << "entrou" << endl;
+                        break;
+                    }else {
+                        //cout << "caiu no else" << endl;
+                        for (int pos = j; pos >= 0; pos--) {
+                            //()
+                            if(expressao[pos] == temp && expressao[pos] != '0') {
+                                // cout << expressao[pos] << endl;
+                                expressao[j] = '0';
+                                expressao[pos] = '0';
+                                // cout << expressao << endl;
+                                pilha.pop_back();
+                                break;
+                            } else {
+                                // cout << expressao << endl;
+                            }
+                        }
+                    }
+                }
             }
         }
+        if (!pilha.empty()) {
+            // cout <<"pilha nao vazia"<< endl;
+            ok = false;
+            pilha.clear();
+        }
 
-        if (!parenteses.empty() || !colchetes.empty() || !chaves.empty()) ok = false;
-        parenteses.clear();
-        colchetes.clear();
-        chaves.clear();
-
-	    cout << (ok ? "S" : "N") << endl;
+        cout << (ok ? "S" : "N") << endl;
     }
 }
+/*
+2
+([])
+([)]
+*/
