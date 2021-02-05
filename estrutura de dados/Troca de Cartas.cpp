@@ -1,3 +1,7 @@
+/*
+https://neps.academy/br/course/10/lesson/280
+Troca de Cartas
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
