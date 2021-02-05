@@ -7,7 +7,7 @@ Fonte: OBI 2011 - Segunda Fase
 using namespace std;
 
 int n;
-vector <char> parenteses, chaves, colchetes;
+//vector <char> parenteses, chaves, colchetes;
 string expressao;
 vector <char> pilha;
 
