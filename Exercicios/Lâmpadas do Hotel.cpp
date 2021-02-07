@@ -16,7 +16,7 @@ int main() {
 
   if (fim_lamp2 != ini_lamp2) {
     cont++;
-    ini_lamp1 = (!ini_lamp1);
+    ini_lamp1 = !ini_lamp1;
   }
   if (ini_lamp1 != fim_lamp1) cont++;
 
