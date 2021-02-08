@@ -26,10 +26,10 @@ int main() {
         web[p] = v;
     }
 
-    for(map<ll, ll>::iterator pos = instalados.begin(); pos != instalados.end(); pos++){
-        if(web.find(pos -> first) != web.end()){
-            if(web[pos -> first] > pos -> second){
-                cout << pos -> first << " " << web[pos -> first] << endl;
+    for (map<ll, ll>::iterator pos = instalados.begin(); pos != instalados.end(); pos++) {
+        if (web.find(pos->first) != web.end()) {
+            if (web[pos->first] > pos->second) {
+                cout << pos->first << " " << web[pos->first] << endl;
             }
         }
     }
