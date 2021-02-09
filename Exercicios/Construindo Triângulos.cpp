@@ -1,45 +1,45 @@
 /*
 https://neps.academy/br/exercise/681
 Construindo Triângulos
-não acabdo
+Fonte: Liga de Programação 2020 - Etapa 1
 */
 #include <bits/stdc++.h>
-#include <math.h>
 using namespace std;
+const int MAX = 1e5 + 10;
 
-typedef long long int li;
-
-vector <li> v;
-li x, n;
-li a, b, c, maiorArea, result, h;
-
-li QualTrianguloeh(li a, li b, li c) {
-    if (a == (c + b)){
-        maiorArea = a * (b / 2);
-    }else if (a < (c + b)){
-        maiorArea = (a + b + c) / 2;
-    }else if (a > (c + b)){
-        maiorArea = (a + b + c) / 2;
-    }
-}
+int v[MAX], n, lado1, lado2, lado3;
+double raiz;
 
 int main() {
-    cin >> n;
-    for(li i = 0; i < n; i++) {
-        cin >> x;
-        v.push_back(x);
+
+  cin >> n;
+
+  for (int i = 1; i <= n; i++) cin >> v[i];
+
+  sort(v + 1, v + n + 1);
+
+
+  for (int i = 1; i < n - 1; i++) {
+    int inicio = i + 2, fim = n, p = -1;
+
+    while (inicio <= fim) {
+      int soma = (inicio + fim) >> 1;
+
+      if (v[i] + v[i + 1] > v[soma]) {
+        p = soma;
+        inicio = soma + 1;
+      } else fim = soma - 1;
     }
 
-    sort(v.begin(), v.end());
-    for(li i = 0; i < v.size() - 2; i++){
-        a = v[i];
-        b = v[i + 1];
-        c = v[i + 2];
-        result = QualTrianguloeh(a * a, b * b, c * c);
+    if (p != -1) {
+      if (sqrt(1.00 * v[i] * v[i + 1] * v[p]) > raiz) {
+        lado1 = v[i];
+        lado2 = v[i + 1];
+        lado3 = v[p];
+        raiz = sqrt(1.00 * v[i] * v[i + 1] * v[p]);
+      }
     }
+  }
 
-    // if (a == (c + b)) return "r";
-    // else if (a < (c + b)) return "a";
-    // else if (a > (c + b)) return "o";
+  cout << lado1 << " " << lado2 << " " << lado3 << endl;
 }
-
