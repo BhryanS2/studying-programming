@@ -5,32 +5,25 @@ Fonte: OBI 2007 - Primeira Fase
 */
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long int ll;
-
-int n, c;
-map<ll, ll>  instalados;
-map<ll, ll> web;
 
 int main() {
+    int n, c;
+
     cin >> c >> n;
 
-    ll p, v;
+    map<int, int>  instalados, web;
+    int p, v;
 
     for (int i = 0; i < c; i++) {
         cin >> p >> v;
-        instalados.insert(make_pair(p, v));
+        instalados[p] = v;
     }
 
     for (int i = 0; i < n; i++) {
         cin >> p >> v;
-        web[p] = v;
+        if (instalados[p] < v) web[p] = max(web[p], v);
     }
 
-    for (map<ll, ll>::iterator pos = instalados.begin(); pos != instalados.end(); pos++) {
-        if (web.find(pos->first) != web.end()) {
-            if (web[pos->first] > pos->second) {
-                cout << pos->first << " " << web[pos->first] << endl;
-            }
-        }
-    }
+    for (auto pos : web) cout << pos.first << " " << pos.second << endl;
+
 }
