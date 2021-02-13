@@ -1,3 +1,7 @@
+/*
+https://neps.academy/br/exercise/749
+Divisível por 3 e 7
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
