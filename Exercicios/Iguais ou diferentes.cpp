@@ -1,3 +1,7 @@
+/*
+Iguais ou diferentes
+https://neps.academy/br/exercise/745
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
