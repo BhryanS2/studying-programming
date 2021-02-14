@@ -15,7 +15,7 @@ public:
   static int media_inteira(int a, int b) {
     return (a + b) / 2;
   }
-
+  
   static double media_3(double a, double b, double c) {
     return (a + b + c) / 3;
   }
