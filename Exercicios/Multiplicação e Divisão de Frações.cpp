@@ -1,3 +1,7 @@
+/*
+https://neps.academy/br/exercise/738
+Multiplicação e Divisão de Frações
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
