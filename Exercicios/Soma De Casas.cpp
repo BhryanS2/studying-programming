@@ -4,14 +4,14 @@ https://neps.academy/br/exercise/255
 Soma de Casas
 */
 #include <bits/stdc++.h>
-
+const int MAX = 10e5 + 100;
 using namespace std;
 
-vector< int > v(1000100);
+int v[MAX];
 
 int main() {
 
-  int n, somaTotal, arr1, arr2;
+  int n, somaTotal, casa1, casa2;
 
   cin >> n;
 
@@ -21,8 +21,8 @@ int main() {
 
   for (int l = 1, r = n; l < r;) {
     if (v[l] + v[r] == somaTotal) {
-      arr1 = v[l];
-      arr2 = v[r];
+      casa1 = v[l];
+      casa2 = v[r];
       break;
     }
 
@@ -31,7 +31,7 @@ int main() {
 
   }
 
-  cout << arr1 << " " << arr2 << endl;
+  cout << casa1 << " " << casa2 << endl;
 
   return 0;
 }
