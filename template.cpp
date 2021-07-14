@@ -19,4 +19,4 @@ int main() {
 }
 
 
-//g++ exe3.cpp -o exe3.exe && exe3.exe < input.txt
+//g++ exe.cpp -o exe && exe < input.txt

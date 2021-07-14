@@ -1,7 +1,8 @@
 /*
+Cifra da Nlogônia
+https://neps.academy/br/exercise/1487
 OBI 2021
-Fase 1
-cifra
+Nível 2
 */
 #include <bits/stdc++.h>
 using namespace std;

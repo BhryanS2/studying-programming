@@ -1,3 +1,9 @@
+/*
+Cifra da Nlogônia
+https://neps.academy/br/exercise/1487
+OBI 2021
+Nível 2
+*/
 #include <bits/stdc++.h>
 #define N 24
 

@@ -1,3 +1,10 @@
+/*
+Idade de Camila
+https://neps.academy/br/exercise/1479
+OBI 2021
+Nível 2
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

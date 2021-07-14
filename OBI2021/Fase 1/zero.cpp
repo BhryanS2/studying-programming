@@ -1,3 +1,10 @@
+/*
+Zero para Cancelar
+https://neps.academy/br/exercise/1486
+OBI 2021
+Nível 2
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
