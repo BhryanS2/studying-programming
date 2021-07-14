@@ -10,7 +10,6 @@ typedef pair<int, int> PII;
 #define MP(a,b) make_pair(a,b)
 #define F first
 #define S second
-
 #define MAX 300
 
 int main() {
