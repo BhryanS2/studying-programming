@@ -2,7 +2,7 @@
 https://neps.academy/br/exercise/1483
 Tempo de Resposta
 OBI 2021
-Não resolvido
+Resolvido
 */
 #include <bits/stdc++.h>
 using namespace std;
