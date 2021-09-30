@@ -19,7 +19,3 @@
 *.out
 *.app
 *.txt
-# ingorar arquivos sem extenção
-*
-!*/
-!*.*
