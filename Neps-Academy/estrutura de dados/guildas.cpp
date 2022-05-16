@@ -8,9 +8,7 @@ using namespace std;
 
 #define MAXN 100100
 
-int n, k;
 int pontos[MAXN], guildas[MAXN];
-int pai[MAXN], peso[MAXN], qtd[MAXN];
 
 int find(int x) {
    if (guildas[x] == x) return x;
@@ -27,7 +25,7 @@ void join(int x, int y) {
 int main() {
     int m, n;
     while (cin >> n >> m) {
-        if (n == 0 && m == 0) break;
+        if (n == 0 and m == 0) break;
         int ans = 0;
         // leio os pontos e quardo os times
         for (int i = 1; i <= n; i++) {
