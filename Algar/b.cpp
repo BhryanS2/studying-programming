@@ -1,3 +1,8 @@
+/*
+algar 2022
+triangulo
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -14,8 +19,17 @@ typedef pair<int, int> PII;
 #define MAX 100000000
 
 int main() {
+    vector<int> v;
+    int a, b, c;
+    cin >> a >> b >> c;
+    v.PB(a);
+    v.PB(b);
+    v.PB(c);
+    sort(v.begin(), v.end());
 
-  return 0;
+    if(v[0] + v[1] )
+
+    return 0;
 }
 
 
