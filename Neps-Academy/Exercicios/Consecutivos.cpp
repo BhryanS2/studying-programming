@@ -19,5 +19,5 @@ int main() {
     resposta = cont > resposta ? cont : resposta;
   }
 
-  cout << resposta;
+  cout << resposta << endl;
 }

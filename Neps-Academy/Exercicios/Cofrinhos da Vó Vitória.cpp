@@ -28,6 +28,7 @@ int main() {
       res += a - b;
       cout << res << endl;
     }
+    cout << endl;
   }
   return 0;
 }
