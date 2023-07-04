@@ -16,7 +16,7 @@ int main() {
 
   REP(i, 3) if(TotalAlim[i] < QtdDesejada[i]) res += TotalAlim[i] - QtdDesejada[i];
 
-  printf("%d", abs(res));
+  printf("%d\n", abs(res));
   return 0;
 }
 

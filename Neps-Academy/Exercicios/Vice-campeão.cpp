@@ -17,5 +17,5 @@ int main() {
   v.push_back(c3);
   sort(v.begin(), v.end());
 
-  cout << v[1];
+  cout << v[1] << endl;
 }

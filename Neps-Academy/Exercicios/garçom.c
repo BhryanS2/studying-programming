@@ -3,7 +3,7 @@ https://neps.academy/br/exercise/324
 Garçom
 Fonte: OBI 2010 - Primeira Fase
 */
-#include<bits/stdc++.h>
+#include <stdio.h>
 int main() {
   int linhas, i, latas, copos, cont, maior;
   scanf("%d", &linhas);
@@ -17,6 +17,6 @@ int main() {
     }
 
   }
-  printf("%d \n", cont);
+  printf("%d\n", cont);
   return 0;
 }

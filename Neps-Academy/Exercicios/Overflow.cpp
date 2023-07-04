@@ -14,10 +14,10 @@ int main() {
   cin >> n1 >> n2 >> op >> n3;
 
   if (op == '*') {
-    if (n2 * n3 > n1) cout << "OVERFLOW";
-    else cout << "OK";
+    if (n2 * n3 > n1) cout << "OVERFLOW" << endl;
+    else cout << "OK" << endl;
   } else {
-    if ((n2 + n3) > n1) cout << "OVERFLOW";
-    else cout << "OK";
+    if ((n2 + n3) > n1) cout << "OVERFLOW" << endl;
+    else cout << "OK" << endl;
   }
 }

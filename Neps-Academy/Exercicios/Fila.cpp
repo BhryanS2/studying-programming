@@ -31,14 +31,18 @@ int main() {
 
     sai.insert(tmp);
   }
-
+  bool espaco = true;
   for (int i = 0; i < n; i++) {
     if (sai.find(fila[i]) == sai.end()) {
-      cout << fila[i] << " ";
+      if (espaco) {
+        cout << fila[i];
+        espaco = false;
+      } else {
+        cout << " " << fila[i];
+      }
     }
   }
-
   cout << endl;
-
+  
   return 0;
 }

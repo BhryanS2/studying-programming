@@ -17,5 +17,5 @@ int main() {
     }
   }
 
-  cout << coposquebrados;
+  cout << coposquebrados << endl;
 }

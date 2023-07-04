@@ -17,7 +17,7 @@ bool eh_primo(int x) {
 	if (cont == 2) {
 		return true;
 	}
-else {
+	else {
 		return false;
 	}
 }
@@ -29,8 +29,7 @@ int main() {
 
 	if (eh_primo(x)) {
 		cout << "S" << "\n";
-	}
-else {
+	} else {
 		cout << "N" << "\n";
 	}
 }

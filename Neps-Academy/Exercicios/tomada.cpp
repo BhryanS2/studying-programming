@@ -13,7 +13,7 @@ int main() {
 
 	total = (t1 - 3) + t2 + t3 + t4;
 
-	cout << total;
+	cout << total << endl;
 	/*int v[5],soma;
 
 	for(int i = 0; i < 4; i++){

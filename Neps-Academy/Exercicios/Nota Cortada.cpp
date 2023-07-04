@@ -13,7 +13,7 @@ int main() {
 
   a = (b + t) * 35;
 
-  if (a > 35 * 160) cout << 1;
-  else cout << (a < 35 * 160 ? 2 : 0);
+  if (a > 35 * 160) cout << 1 << endl;
+  else cout << (a < 35 * 160 ? 2 : 0) << endl;
 
 }

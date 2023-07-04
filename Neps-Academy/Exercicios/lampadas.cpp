@@ -1,7 +1,7 @@
 /*
-https://neps.academy/br/exercise/607
-Labirinto
-Fonte: OBI 2007 - Segunda Fase
+Lâmpadas do Hotel
+https://neps.academy/br/exercise/59
+Fonte: OBI 2016 - Primeira Fase
 */
 #include<bits/stdc++.h>
 using namespace std;

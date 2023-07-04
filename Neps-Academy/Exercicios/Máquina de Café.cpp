@@ -18,7 +18,7 @@ int main() {
 
 	menor = min(andar1, min(andar2, andar3));
 
-	printf("%d", menor);
+	printf("%d\n", menor);
 	return 0;
 }
 

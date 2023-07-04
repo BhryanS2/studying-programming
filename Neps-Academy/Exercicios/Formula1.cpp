@@ -18,7 +18,7 @@ int main() {
     cin >> sistema_pontuacao;//leio o sistema de pontuacao
     while (sistema_pontuacao--) {//ele roda ate acabar o numero de sistemas de pontuacao
 
-        //Aqui abaixo inicio o vetor de pontos e o da classificacao tudo com zero
+      //Aqui abaixo inicio o vetor de pontos e o da classificacao tudo com zero
       memset(pontos, 0, sizeof(pontos));
       memset(classificacao, 0, sizeof(classificacao));
 
@@ -57,8 +57,14 @@ int main() {
 
       //comparo se os classificado tiveram a melhor pontuacao
       //se tiveram a mesma pontuacao eu mostro o piloto
+      bool espaco = true;
       for (int i = 1; i <= pilotos; ++i)
-        if (classificacao[i] == maior_pontuacao) cout << i << " ";
+        if (classificacao[i] == maior_pontuacao) {
+          if (espaco) {
+            printf("%d", i);
+            espaco = false;
+          } else printf(" %d", i);
+        }
       cout << endl;
     }
   }
