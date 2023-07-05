@@ -1,3 +1,10 @@
+/*
+https://www.beecrowd.com.br/judge/pt/problems/view/1907
+Coloração de Cenários de Jogos
+beecrowd | 1907
+Passou
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
