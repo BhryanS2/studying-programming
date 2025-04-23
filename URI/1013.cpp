@@ -18,16 +18,21 @@ typedef pair<int, int> PII;
 
 #define MAX 100000000
 
+int maior(int a, int b) {
+  if (a > b) return a;
+  return b;
+}
+
 int main() {
   int a, b, c;
   cin >> a >> b >> c;
   // int maiorAB = (a + b + abs(a - b)) / 2;
   // int maiorABC = (maiorAB + c + abs(maiorAB - c)) / 2;
-  int maior = max(a, max(b, c));
-  cout << maior << " eh o maior" << endl;
+  // int maior = max(a, max(b, c));
+  cout << maior(a, maior(b, c)) << " eh o maior" << endl;
 
   return 0;
 }
 
 
-//g++ 1013.cpp -o exe && ./exe < input.txt
+//g++ 1013.cpp -o exe; cat input.txt | ./exe

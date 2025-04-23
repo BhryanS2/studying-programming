@@ -29,7 +29,9 @@ int determinante(int matriz[][MAX], int orden) {
   if (orden == 1)  det = matriz[0][0];
   else {
     for (int j = 0; j < orden; j++) {
-      det = det + matriz[0][j] * Cofator(matriz, orden, 0, j);
+      int cofator = Cofator(matriz, orden, 0, j);
+      cout << "cofator i: " << cofator << endl;
+      det = det + matriz[0][j] * cofator;
     }
   }
 
@@ -55,6 +57,10 @@ int Cofator(int matriz[][MAX], int orden, int EixoX, int EixoY) {
       }
     }
   }
+  int i = -1;
+  if((EixoX+EixoY)%2 == 0){
+    i = 1;
+  }
 
-  return pow(-1.0, EixoX + EixoY) * determinante(submatriz, n);
+  return i * determinante(submatriz, n);
 }
