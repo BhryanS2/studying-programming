@@ -17,16 +17,13 @@ typedef pair<int, int> PII;
 #define MAX 100000000
 
 int main() {
-  vector<int> arr(4);
-  cin >> arr[0] >> arr[1] >> arr[2] >> arr[3];
-  std::sort(arr.begin(), arr.end());
-  int a = arr[0], b = arr[1], c = arr[2], d = arr[3];
-  if ((c >= a + b) && (d >= c + b)) cout << "N" << endl;
+  int a, b, c;
+  cin >> a >> b >> c;
+  if (a * c > b) cout << "N" << endl;
   else cout << "S" << endl;
-
 
   return 0;
 }
 
 
-//g++ 1929.cpp -o exe; cat input.txt | ./exe
+//g++ exe.cpp -o exe; cat input.txt | ./exe
