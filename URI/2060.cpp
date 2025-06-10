@@ -1,7 +1,5 @@
 /*
-beecrowd | 1564
-Vai Ter Copa?
-https://judge.beecrowd.com/pt/problems/view/1564
+
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -18,19 +16,27 @@ typedef pair<int, int> PII;
 
 #define MAX 100000000
 
+int c2,c3,c4,c5;
+
 int main() {
-  int n;
-  while (cin >> n && n != EOF)
-  {
-    if (n != 0) {
-      cout << "vai ter duas!" << endl;
-    } else {
-      cout << "vai ter copa!" << endl;
-    }
+  int n, i;
+  cin >> n;
+  REP(i,n) {
+    int x;
+    cin >> x;
+    if (x % 2 == 0) c2++;
+    if (x % 3 == 0) c3++;
+    if (x % 4 == 0) c4++;
+    if (x % 5 == 0) c5++;
   }
 
+
+  cout << c2 <<" Multiplo(s) de 2" << endl;
+  cout << c3 <<" Multiplo(s) de 3" << endl;
+  cout << c4 <<" Multiplo(s) de 4" << endl;
+  cout << c5 <<" Multiplo(s) de 5" << endl;
   return 0;
 }
 
 
-//g++ 1180.cpp -o exe; ./exe
+//g++ exe.cpp -o exe; cat input.txt | ./exe

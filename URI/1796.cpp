@@ -1,7 +1,5 @@
 /*
-beecrowd | 1564
-Vai Ter Copa?
-https://judge.beecrowd.com/pt/problems/view/1564
+
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -19,18 +17,20 @@ typedef pair<int, int> PII;
 #define MAX 100000000
 
 int main() {
-  int n;
-  while (cin >> n && n != EOF)
-  {
-    if (n != 0) {
-      cout << "vai ter duas!" << endl;
-    } else {
-      cout << "vai ter copa!" << endl;
-    }
+  int n, i, nSatisfy = 0, satisfy = 0;
+  cin >> n;
+  REP(i,n) {
+    int x;
+    cin >> x;
+    if (x) nSatisfy++;
+    else satisfy++;
   }
+
+  if (nSatisfy >= satisfy) cout << "N" << endl;
+  else cout << "Y" << endl;
 
   return 0;
 }
 
 
-//g++ 1180.cpp -o exe; ./exe
+//g++ exe.cpp -o exe; cat input.txt | ./exe
