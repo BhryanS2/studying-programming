@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "files.associations": {
     "*.embeddedhtml": "html",
@@ -9,3 +10,14 @@
     "numeric": "cpp"
   }
 }
+=======
+{
+  "files.associations": {
+    "*.embeddedhtml": "html",
+    "ostream": "cpp",
+    "iostream": "cpp",
+    "cmath": "cpp",
+    "random": "cpp"
+  }
+}
+>>>>>>> 51abad95303355edb6d6a9d59c3cbf8e42ff9e6a
