@@ -17,13 +17,26 @@ typedef pair<int, int> PII;
 #define MAX 100000000
 
 int main() {
-  string s;
-  double a, b;
-  cin >> s >> a >> b;
-  cout << "TOTAL = R$ ";
-  cout << fixed << setprecision(2) << a + (b * 0.15) << endl;
+  int n;
+  cin >> n;
+  int v[] = { 6, 2, 5, 5, 4, 5, 6, 3, 7, 6 };
+  for (int i = 0; i < n; i++)
+  {
+    string s;
+    cin >> s;
+    int count = 0;
+    for (int j = 0; j < s.size(); j++)
+    {
+      int pos = s[j] - '0';
+      count += v[pos];
+    }
+
+    cout << count << " leds" << endl;
+
+  }
+
   return 0;
 }
 
 
-//g++ 1009.cpp -o exe; cat input.txt | ./exe
+//g++ 1168.cpp -o exe; cat input.txt | ./exe
