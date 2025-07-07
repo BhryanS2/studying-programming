@@ -81,4 +81,4 @@ int main() {
 }
 
 
-//g++ 1161.cpp -o exe && ./exe < input.txt
+//g++ 2151.cpp -o exe && ./exe < input.txt
