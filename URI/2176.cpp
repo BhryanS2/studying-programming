@@ -17,29 +17,21 @@ typedef pair<int, int> PII;
 #define MAX 100000000
 
 int main() {
-  int x;
-  char c;
-  double m[13][13];
-  cin >> x >> c;
-  for (int i = 0; i < 12; i++)
+  string s;
+  cin >> s;
+  bool par = false;
+  int count = 0;
+  for (int i = 0; i < s.size(); i++)
   {
-    for (int j = 0; j < 12; j++)
-    {
-      cin >> m[i][j];
-    }
-
+    if(s[i] == '1') count++;
   }
-  double res = 0;
-  for (int i = 0; i < 12; i++)
-  {
-    res += m[x][i];
-  }
+  if(count % 2 == 0) s += '0';
+  else s += '1';
 
-  if (c == 'S') cout << fixed  << setprecision(1) << res << endl;
-  else cout << fixed  << setprecision(1) << (res / 12) << endl;
+  cout << s << endl;
 
   return 0;
 }
 
 
-//g++ exe.cpp -o exe; cat input.txt | ./exe
+//g++ 2176.cpp -o exe; cat input.txt | ./exe
