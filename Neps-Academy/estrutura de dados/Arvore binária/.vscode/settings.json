@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.embeddedhtml": "html",
+    "type_traits": "c"
+  }
+}
