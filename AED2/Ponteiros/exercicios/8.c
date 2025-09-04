@@ -7,8 +7,8 @@
 
 #include <stdio.h>
 
-int divs(int n, int *min, int *max);
-int isPrimo(int *n);
+int divs(int n, int* min, int* max);
+int isPrimo(int* n);
 
 
 int main() {
@@ -19,35 +19,37 @@ int main() {
     printf("O numero %d nao e primo.\n", n);
     printf("O menor divisor eh: %d\n", min);
     printf("O maior divisor eh: %d\n", max);
-  } else {
+  }
+  else {
     printf("O numero %d e primo.\n", n);
   }
 
   return 0;
 }
 
-int isPrimo(int *x) {
+int isPrimo(int* x) {
   if (*x == 1)  return 0;
   for (long long int i = 2; i * i <= *x; i++) {
     if (*x % i == 0) return 0;
   }
   return 1;
-  
-}
 
-int divs(int n, int *min, int *max) {
+}
+int divs(int n, int* min, int* max) {
   if (isPrimo(&n)) return 0;
+
+  *min = 0;
+  *max = 0;
+
   for (int i = 2; i <= n / 2; i++) {
     if (n % i == 0) {
       *min = i;
+      *max = n / i;
       break;
     }
   }
-  for (int i = n / 2; i >= 2; i--) {
-    if (n % i == 0) {
-      *max = i;
-      break;
-    }
-  }
+
+  if (*min == 0) return 0;
+
   return 1;
 }
