@@ -29,7 +29,7 @@ int fatores(int v[], int n, int *x) {
 int v[11];
 
 void main() {
-  int n = 758;
+  int n = 8767;
   int total = 0;
   if (fatores(v, n, &total)) printf("Seu numero %d tem mais de 10 divisores, tendo %d\n", n, total);
   else printf("Seu numero %d tem menos de 10 divisores, tendo %d\n", n, total);

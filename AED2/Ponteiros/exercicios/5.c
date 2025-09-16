@@ -11,7 +11,7 @@ int compare_numbers(int a, int b, int* sum, int* product) {
   *sum = a + b;
   *product = a * b;
 
-  if (*sum < 0 || *product < 0) {
+  if (*sum <= -2147483648  || *product <= -2147483648) {
     // um inteiro tem limite de 32 bits, então se a soma ou o produto
     // ultrapassar esse limite, retornamos -1
     // exemplo: 2147483647 + 1 = -2147483648 (overflow)
@@ -20,7 +20,7 @@ int compare_numbers(int a, int b, int* sum, int* product) {
     // é importante verificar se a soma ou o produto estouram o limite
     // de um inteiro, que é 2147483647 para int e 32767
     // para short int.
-    return -1; 
+    return -1;
   }
   if (a == b) {
     return 1;
