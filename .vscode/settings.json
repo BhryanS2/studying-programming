@@ -1,7 +1,20 @@
 {
   "files.associations": {
+    "*.embeddedhtml": "html",
     "ostream": "cpp",
     "iostream": "cpp",
-    "cmath": "cpp"
+    "cmath": "cpp",
+    "bitset": "cpp",
+    "chrono": "cpp",
+    "algorithm": "cpp",
+    "random": "cpp",
+    "array": "cpp",
+    "fstream": "cpp",
+    "future": "cpp",
+    "optional": "cpp",
+    "shared_mutex": "cpp",
+    "sstream": "cpp",
+    "thread": "cpp",
+    "tuple": "cpp"
   }
 }
