@@ -17,9 +17,9 @@ for input in "${inputs[@]}"; do
 done
 
 echo "arquivo testando tudo\n"
-gcc -c testando_mnetodos.c -o testando_mnetodos.o
-gcc -o testando_mnetodos.exe testando_mnetodos.o
-./testando_mnetodos.exe > output_testando_metodos.txt
+gcc -c testando_metodos.c -o testando_metodos.o
+gcc -o testando_metodos.exe testando_metodos.o
+./testando_metodos.exe > output_testando_metodos.txt
 
 echo "Limpando arquivos objeto e executáveis..."
 
