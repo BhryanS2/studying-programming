@@ -1,0 +1,21 @@
+Exercicio 18:
+Leitura da arvore A:
+Digite o numero de elementos da arvore: Digite os elementos da arvore:
+Leitura da arvore B:
+Digite o numero de elementos da arvore: Digite os elementos da arvore:
+Leitura da arvore C:
+Digite o numero de elementos da arvore: Digite os elementos da arvore:
+Arvore A (Pre Order):
+10 5 3 7 15 Arvore B (Pre Order):
+5 15 20 25 Arvore C (Pre Order):
+7 15 30 Entre com dois valores (valor1 e valor2):
+3 5 7 10 15 Elementos entre 1 e 100:
+Quantidade de elementos no intervalo: 5
+Posicao da mediana: 3
+Valor da Mediana: 7
+Programa finalizado.
+
+
+arquivo testando tudo\n
+Limpando arquivos objeto e executáveis...
+Feito.

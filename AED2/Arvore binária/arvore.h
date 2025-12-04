@@ -1,20 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 struct Node {
   int v;
-  struct Node *d;
-  struct Node *e;
+  struct Node* d;
+  struct Node* e;
 };
 
 struct Node* createNode(int a) {
-  struct Node* aux = (struct Node*) malloc(sizeof(struct Node));
-  aux->v= a;
+  struct Node* aux = (struct Node*)malloc(sizeof(struct Node));
+  aux->v = a;
   aux->e = NULL;
   aux->d = NULL;
   return aux;
 }
 
+struct Node* pesquisa(struct Node* root, int item) {
+  if (root == NULL) return NULL;
+  if (root->v == item) return root;
+  if (item < root->v) return pesquisa(root->e, item);
+  return pesquisa(root->d, item);
+}
 
 // 20. Implemente um algoritmo recursivo para a inserção de nós em árvores binárias.
 void insertNode(struct Node* root, int v) {
+  if (root == NULL) return;
+  if (root->v == v) return;
+  // não insere valores duplicados
+  if (pesquisa(root, v) != NULL) return;
+
   if (v < root->v) {
     if (root->e == NULL) {
       root->e = createNode(v);
@@ -37,36 +52,38 @@ void insertNode(struct Node* root, int v) {
 // 19. A remoção em árvores binárias foi implementada encontrando o antecessor do nó a ser removido.
 // A remoção poderia ter sido implementada utilizando o sucessor deste nó. Implemente a remoção
 // utilizando o sucessor.
-struct Node *proximoNode(struct Node* no) {
+struct Node* proximoNode(struct Node* no) {
   no = no->d;
   while (no != NULL && no->e != NULL)
-      no = no->e;
+    no = no->e;
   return no;
 }
 
 // 21. Implemente um algoritmo recursivo para a remoção de nós em árvores binárias.
-struct Node *removeNode(struct Node* root, int dado) {
-  struct Node *c = root;
-  struct Node *tmp = c;
+struct Node* removeNode(struct Node* root, int dado) {
+  struct Node* c = root;
+  struct Node* tmp = c;
 
   if (c == NULL) return 0;
 
   if (c->v > dado) {
     root->e = removeNode(c->e, dado);
-  } else if (c->v < dado) {
+  }
+  else if (c->v < dado) {
     root->d = removeNode(c->d, dado);
-  } else {
+  }
+  else {
     if (root->e == NULL) {
-      tmp=root->d;
+      tmp = root->d;
       free(root);
       return tmp;
     }
     if (root->d == NULL) {
-      tmp=root->e;
+      tmp = root->e;
       free(root);
       return tmp;
     }
-    struct Node *succ = proximoNode(root);
+    struct Node* succ = proximoNode(root);
     root->v = succ->v;
     root->d = removeNode(root->d, succ->v);
   }
@@ -89,6 +106,33 @@ void showInOrder(struct Node* root) {
   showInOrder(root->d);
 }
 
+void printTreeTrunk(struct Node* root, char* prefix, int isLeft) {
+  if (root == NULL) return;
+
+  printf("%s", prefix);
+  printf(isLeft ? "├── " : "└── ");
+  printf("%d\n", root->v);
+
+  char newPrefix[255];
+  strcpy(newPrefix, prefix);
+  strcat(newPrefix, isLeft ? "│   " : "    ");
+
+  printTreeTrunk(root->e, newPrefix, 1);
+  printTreeTrunk(root->d, newPrefix, 0);
+}
+
+void showTreeBonita(struct Node* root) {
+  if (root == NULL) {
+    printf("Arvore vazia\n");
+    return;
+  }
+  printf("%d\n", root->v);
+
+  char prefix[255] = "";
+
+  printTreeTrunk(root->e, prefix, 1);
+  printTreeTrunk(root->d, prefix, 0);
+}
 
 void showPostOrder(struct Node* root) {
   if (root == NULL) return;
@@ -101,40 +145,39 @@ void showPostOrder(struct Node* root) {
 // (a) o número de nós em uma árvore binária
 // (b) o número de folhas
 // (c) o número de filhos a direita
-int numNode(struct Node * root) {
+int numNode(struct Node* root) {
   if (root == NULL) return 0;
   return 1 + numNode(root->e) + numNode(root->d);
 }
 
-int numFolhas(struct Node *root) {
-  if(root ==NULL) return 0;
-  if(root->d == NULL && root->e == NULL) return 1;
+int numFolhas(struct Node* root) {
+  if (root == NULL) return 0;
+  if (root->d == NULL && root->e == NULL) return 1;
   return numFolhas(root->e) + numFolhas(root->d);
 }
 
-int numFilhosDireita(struct Node *root) {
-  if(root == NULL) return 0;
+int numFilhosDireita(struct Node* root) {
+  if (root == NULL) return 0;
   return 1 + numFilhosDireita(root->d);
 }
+
 // 2. Elabore uma função que receba uma árvore e exiba os nós que possuem duas subárvores.
-struct Node* pesquisa(struct Node* root, int item) {
-  if (root == NULL) return NULL;
-  if (root->v == item) return root;
-  if (item < root->v) return pesquisa(root->e, item);
-  return pesquisa(root->d, item);
+void exibeNosComDoisFilhos(struct Node* root) {
+  if (root == NULL) return;
+  if (root->e != NULL && root->d != NULL) {
+    printf("%d ", root->v);
+  }
+  exibeNosComDoisFilhos(root->e);
+  exibeNosComDoisFilhos(root->d);
 }
 // 3. Elabore uma função que receba uma árvore e exiba os nós que possuem uma subárvore.
-struct Node* pesquisaComUmFilho(struct Node* root, int item) {
-  if (root == NULL) return NULL;
-  if (root->v == item) {
-    if ((root->e != NULL && root->d == NULL) || (root->e == NULL && root->d != NULL)) {
-      return root;
-    } else {
-      return NULL;
-    }
+void exibeNosComUmFilho(struct Node* root) {
+  if (root == NULL) return;
+  if ((root->e != NULL && root->d == NULL) || (root->e == NULL && root->d != NULL)) {
+    printf("%d ", root->v);
   }
-  if (item < root->v) return pesquisaComUmFilho(root->e, item);
-  return pesquisaComUmFilho(root->d, item);
+  exibeNosComUmFilho(root->e);
+  exibeNosComUmFilho(root->d);
 }
 // 4. Elabore uma função que receba uma árvore e exiba os nós folhas da árvore.
 void exibeNosFolhas(struct Node* root) {
@@ -147,8 +190,13 @@ void exibeNosFolhas(struct Node* root) {
 }
 // 5. Elabore uma função que receba um item e escreva o endereço de memória do nó que possui o item na
 // árvore. Utilize a função Pesquisa.
-struct Node* pesquisaEndereco(struct Node* root, int item) {
-  return pesquisa(root, item);
+void exibeEnderecoNo(struct Node* root, int item) {
+  struct Node* no = pesquisa(root, item);
+  if (no == NULL) {
+    printf("Nó não encontrado.\n");
+    return;
+  }
+  printf("Endereço do nó com valor %d: %p\n", item, (void*)no);
 }
 // 6. Elabore uma função que receba um item e exiba seus filhos diretos.
 void exibeFilhosDiretos(struct Node* root, int item) {
@@ -160,12 +208,14 @@ void exibeFilhosDiretos(struct Node* root, int item) {
 
   if (no->e != NULL) {
     printf("Filho esquerdo: %d\n", no->e->v);
-  } else {
+  }
+  else {
     printf("Filho esquerdo: NULL\n");
   }
   if (no->d != NULL) {
     printf("Filho direito: %d\n", no->d->v);
-  } else {
+  }
+  else {
     printf("Filho direito: NULL\n");
   }
 }
@@ -180,7 +230,7 @@ void exibeSubarvoreEsquerda(struct Node* root, int item) {
   printf("\n");
 }
 // 8. Elabore uma função que receba duas árvores e retorne se as mesmas são iguais ou não (retornar 0 ou 1).
-int comparar(struct Node *arvore1, struct Node *arvore2) {
+int comparar(struct Node* arvore1, struct Node* arvore2) {
   if (numNode(arvore1) != numNode(arvore2)) return 0;
   if (arvore1 == NULL && arvore2 == NULL) return 1;
   if (arvore1 == NULL || arvore2 == NULL) return 0;
@@ -188,16 +238,16 @@ int comparar(struct Node *arvore1, struct Node *arvore2) {
   return comparar(arvore1->e, arvore2->e) && comparar(arvore1->d, arvore2->d);
 }
 // 9. Elabore uma função que receba uma árvore e exiba o nó com o menor valor.
-int menorValor(struct Node *root) {
-  if(root == NULL) return 0;
-  struct Node *c = root->e;
-  while(c != NULL && c->e != NULL) {
+int menorValor(struct Node* root) {
+  if (root == NULL) return 0;
+  struct Node* c = root->e;
+  while (c != NULL && c->e != NULL) {
     c = c->e;
   }
   return c->v;
 }
 // 10. Elabore uma função que receba como parâmetro um nó e retorne o nó sucessor deste nó.
-struct Node *sucessor(struct Node* root, int item) {
+struct Node* sucessor(struct Node* root, int item) {
   struct Node* no = pesquisa(root, item);
   if (no == NULL) return NULL;
   return proximoNode(no);
@@ -229,7 +279,7 @@ struct Node *sucessor(struct Node* root, int item) {
 
 // 13. Elabore uma função em que receba como parâmetros dois valores a e b e imprima todos os registros
 // da árvore que são maiores que a e menores que b.
-void imprimirMioresAMeoresB(struct Node *root, int a, int b) {
+void imprimirMioresAMeoresB(struct Node* root, int a, int b) {
   if (root == NULL) return;
   if (root->v > a) printf("%d maior que %d\n", root->v, a);
   if (root->v < b) printf("%d menor que %d\n", root->v, b);
@@ -238,30 +288,81 @@ void imprimirMioresAMeoresB(struct Node *root, int a, int b) {
 }
 
 // 14. Elabore uma função que atualizar um registro da árvore.
-void update(struct Node *root, int current, int toUpdate){
+void update(struct Node* root, int current, int toUpdate) {
   removeNode(root, current);
   insertNode(root, toUpdate);
 }
 // 15. Dadas duas árvores, elabore uma função que faça a união destas árvores.
-struct Node* mergeTree(struct Node*t1, struct Node*t2) {
+void copiarValores(struct Node* origem, struct Node** root) {
+  if (origem == NULL) return;
+  if (*root == NULL) {
+    *root = createNode(origem->v);
+  }
+  else {
+    insertNode(*root, origem->v);
+  }
+
+  copiarValores(origem->e, root);
+  copiarValores(origem->d, root);
+}
+struct Node* mergeTree(struct Node* t1, struct Node* t2) {
   if (t1 == NULL) return t2;
   if (t2 == NULL)  return t1;
-  struct Node *aux = t2->v > t1->v
-  struct Node *arvore_final
+  struct Node* arvore_final = NULL;
 
+  copiarValores(t1, &arvore_final);
+  copiarValores(t2, &arvore_final);
+
+  return arvore_final;
 }
 // 16. Dadas duas árvores, elabore uma função que faça a interseção destas árvores.
-
+struct Node* intersectTree(struct Node* t1, struct Node* t2) {
+  if (t1 == NULL || t2 == NULL) return NULL;
+  struct Node* arvore_final = NULL;
+  if (pesquisa(t2, t1->v) != NULL) {
+    arvore_final = createNode(t1->v);
+    arvore_final->e = intersectTree(t1->e, t2);
+    arvore_final->d = intersectTree(t1->d, t2);
+  }
+  else {
+    struct Node* left = intersectTree(t1->e, t2);
+    struct Node* right = intersectTree(t1->d, t2);
+    if (left != NULL) arvore_final = left;
+    else arvore_final = right;
+  }
+  return arvore_final;
+}
 // 17. Escreva uma função que encontre a altura de uma árvore.
-
-// 18. Usando as funções implementadas nos exercícios anteriores faça um programa que:
-// • Leia três árvores (A, B e C).
-// • Crie uma árvore R resultado da operação: A união (B interseção C).
-// • Leia dois valores (valor 1 e valor 2).
-
-// • Obtenha os elementos da árvore que estão entre os valores: valor1 e valor2.
-// • Imprima a mediana destes elementos. Obs: o elemento da mediana está na posicao (n + 1)/2.
-// Onde n é o número de elementos.
-
+int altura(struct Node* root) {
+  if (root == NULL) return -1;
+  int altura_esquerda = altura(root->e);
+  int altura_direita = altura(root->d);
+  return (altura_esquerda > altura_direita ? altura_esquerda : altura_direita) + 1;
+}
 
 // 22. Escreva um algoritmo que imprima a árvore em níveis.
+void imprimirNiveis(struct Node* root) {
+  if (root == NULL) return;
+
+  struct Node** fila = (struct Node**)malloc(1000 * sizeof(struct Node*));
+  int inicio = 0, fim = 0;
+
+  fila[fim++] = root;
+
+  while (inicio < fim) {
+    int nivel_size = fim - inicio;
+    for (int i = 0; i < nivel_size; i++) {
+      struct Node* atual = fila[inicio++];
+      printf("%d ", atual->v);
+      if (atual->e != NULL) {
+        fila[fim++] = atual->e;
+      }
+      if (atual->d != NULL) {
+        fila[fim++] = atual->d;
+      }
+    }
+    printf("\n");
+  }
+
+  free(fila);
+}
